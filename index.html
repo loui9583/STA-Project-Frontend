@@ -20,7 +20,23 @@
 
     <div class="navbar">
         <div class="navbar-inner-container">
-           
+          <div class="navbar" id="hamburger-container">
+            <div class="container nav-container">
+                <input class="checkbox" type="checkbox" name="" id="" />
+                <div class="hamburger-lines">
+                    <span class="line line1"></span>
+                    <span class="line line2"></span>
+                    <span class="line line3"></span>
+                </div>
+                <div class="menu-items bg-white">
+                    <a href="aktuelleFilm" data-navigo>Aktuelle Film</a>
+                    <a href="users" class="admin-only" data-navigo>Show Users</a>
+                    <a href="addFilm" class="admin-only" data-navigo>Add Films</a>
+                    <a href="addShowing" class="admin-only" data-navigo>Lav forestilling</a>
+                    <a href="showReservations" class="user-only" data-navigo>Se reservationer</a>
+                </div>
+            </div>
+        </div>
            <div style="min-width: 25vw; display: flex; justify-content: start"> 
                 <img style="max-height: 30px;" src="images/menu-outline.svg">
                 <img style="max-height: 30px;" src="images//STA logo all.png">
