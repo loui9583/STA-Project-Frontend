@@ -56,7 +56,7 @@
         .aircraft-type {
             font-size: 20px;
             padding: 4px;
-            background: rgb(207, 37, 37);
+            background: rgb(37, 85, 207);
             margin: 3px;
             border-radius: 10px;
             display: inline-block;
@@ -136,21 +136,32 @@
 
         .socials {
             max-height: 30px;
+            margin: 0 1px;
         }
 
         .navbar {
             width: 100vw;
             display: flex;
             justify-content: center;
-            background: linear-gradient(rgb(53, 53, 53) 0%, rgba(0, 0, 0, 0) 100%);
+            background: white;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
         }
 
         .navbar-inner-container {
-            width: 95vw;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+        width: 95vw;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .left-side {
+        display: flex;
+        align-items: center;
+    }
+
+    .right-side {
+        display: flex;
+    }
 
         .background-image-container {
             position: absolute;
@@ -159,10 +170,11 @@
             overflow: hidden;
         }
         .background-image{
-            max-height: 100vh; min-width: 100vw; opacity: 0.4;
+            max-height: 100vh; min-width: 100vw; opacity: 1;
         }
         .socials-container {
-            display: flex; width: 90px;
+            display: flex;
+            width: 90px;
         }
     </style>
 
@@ -171,17 +183,24 @@
 <body>
 
     <div class="background-image-container">
-        <img class="background-image" src="billeder/P1010320.jpg"
+        <img class="background-image" src="billeder/Alper.jpg"
            >
     </div>
 
     <div class="navbar">
         <div class="navbar-inner-container">
-            <img style="max-height: 50px;" src="menu-outline.svg">
-            <div class="socials-container">
-                <img class="socials" src="logo-linkedin.svg">
-                <img class="socials" src="logo-instagram.svg">
-                <img class="socials" src="logo-facebook.svg">
+           
+           <div style="min-width: 25vw; display: flex; justify-content: start"> 
+                <img style="max-height: 30px;" src="menu-outline.svg">
+                <img style="max-height: 30px;" src="billeder/STA logo all.png">
+            </div>
+
+            <div class="right-side">
+                <div class="socials-container">
+                    <img class="socials" src="logo-linkedin.svg">
+                    <img class="socials" src="logo-instagram.svg">
+                    <img class="socials" src="logo-facebook.svg">
+                </div>
             </div>
         </div>
     </div>
