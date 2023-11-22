@@ -7,136 +7,11 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap">
+
     <style>
         body {
-            background-color: rgb(8, 8, 8);
-            height: 100vh;
-            margin: 0;
-            font-family: 'Kanit', sans-serif;
-            color: white;
-            overflow-x: hidden;
-        }
-
-        h1 {
-            font-size: 5em;
-            text-align: center;
-            margin-bottom: 15px;
-        }
-
-        .content-container {
-            display: flex;
-            max-width: 100vw;
-            justify-content: center;
-            overflow: auto;
-            min-height: 85vh;
-
-        }
-
-        .content {
-            max-width: 95vw;
-            min-height: 75vh;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-        }
-
-        h2 {
-            text-align: center;
-            display: inline;
-        }
-
-        .aircraft-list {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-
-        }
-
-        .aircraft-type {
-            font-size: 20px;
-            padding: 4px;
-            background: rgb(37, 85, 207);
-            margin: 3px;
-            border-radius: 10px;
-            display: inline-block;
-        }
-
-        @import url(https://fonts.googleapis.com/css?family=Roboto:300,400);
-        @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css);
-
-        .snip1533 {
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
-            color: #9e9e9e;
-            display: inline-block;
-            font-family: 'Roboto', Arial, sans-serif;
-            font-size: 16px;
-            margin: 35px 10px 10px;
-            max-width: 250px;
-            min-width: 250px;
-            max-height: 225px;
-            min-height: 225px;
-            position: relative;
-            text-align: center;
-            width: 100%;
-            background-color: #ffffff;
-            border-radius: 5px;
-            border-top: 5px solid #d2652d;
-        }
-
-        .snip1533 *,
-        .snip1533 *:before {
-            -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-            -webkit-transition: all 0.1s ease-out;
-            transition: all 0.1s ease-out;
-        }
-
-        .snip1533 figcaption {
-            padding: 13% 10% 12%;
-        }
-
-        .snip1533 figcaption:before {
-            -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
-            background-color: #fff;
-            border-radius: 50%;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
-            color: #d2652d;
-            content: "\f10e";
-            font-family: 'FontAwesome';
-            font-size: 32px;
-            font-style: normal;
-            left: 50%;
-            line-height: 60px;
-            position: absolute;
-            top: -30px;
-            width: 60px;
-        }
-
-        .snip1533 h3 {
-            color: #3c3c3c;
-            font-size: 20px;
-            font-weight: 300;
-            line-height: 24px;
-            margin: 0px 0 0px;
-        }
-
-        .snip1533 h4 {
-            font-weight: 400;
-            margin: 0;
-            opacity: 0.5;
-        }
-
-        .snip1533 blockquote {
-            font-style: italic;
-            font-weight: 300;
-            margin: 0 0 20px;
-        }
-
-        .socials {
-            max-height: 30px;
-            margin: 0 1px;
+            font-family: 'Varela Round', sans-serif;
         }
 
         .navbar {
@@ -148,33 +23,24 @@
         }
 
         .navbar-inner-container {
-        width: 95vw;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .left-side {
-        display: flex;
-        align-items: center;
-    }
-
-    .right-side {
-        display: flex;
-    }
-
-        .background-image-container {
-            position: absolute;
-            z-index: -1;
-            max-width: 100vw;
-            overflow: hidden;
-        }
-        .background-image{
-            max-height: 100vh; min-width: 100vw; opacity: 1;
-        }
-        .socials-container {
+            width: 95vw;
             display: flex;
-            width: 90px;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .plane-card {
+            border: 1px solid rgb(174, 174, 174);
+           
+            width: 165px;
+            margin: 3px;
+            border-radius: 5px;
+        }
+
+        .plane-container {
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
         }
     </style>
 
@@ -182,104 +48,42 @@
 
 <body>
 
-    <div class="background-image-container">
-        <img class="background-image" src="billeder/Alper.jpg"
-           >
-    </div>
+
 
     <div class="navbar">
         <div class="navbar-inner-container">
-           
-           <div style="min-width: 25vw; display: flex; justify-content: start"> 
-                <img style="max-height: 30px;" src="menu-outline.svg">
-                <img style="max-height: 30px;" src="billeder/STA logo all.png">
-            </div>
-
-            <div class="right-side">
-                <div class="socials-container">
-                    <img class="socials" src="logo-linkedin.svg">
-                    <img class="socials" src="logo-instagram.svg">
-                    <img class="socials" src="logo-facebook.svg">
-                </div>
-            </div>
+            <img style="max-height: 40px;" src="billeder/STA logo all.png">
+            <img style="max-height: 40px;" src="menu-outline.svg">
         </div>
     </div>
 
-    <div class="content-container">
-        <div class="content">
-            <h1 style="font-size: 2.5em;">Training made simple</h1>
-            <h5>ATO/DK/050</h5>
-            <h2>EASA approved solutions for pilots and AOCS</h2>
-            <div class="aircraft-list">
-                <div style="width: 75%; ">
-                    <p class="aircraft-type">B737</p>
-                    <p class="aircraft-type">B787</p>
-                    <p class="aircraft-type">B777</p>
-                    <p class="aircraft-type">A320</p>
-                </div>
-            </div>
-            <br>
+    <img style="max-width: 100vw;" src="billeder\P1010126.jpg">
 
-            <div class="aircraft-list">
-                <div style="width: 75%;">
-                    <p class="aircraft-type" style="background-color: rgb(44, 69, 69);">Type
-                        Rating</p>
-                    <p class="aircraft-type" style="background-color: rgb(44, 69, 69);">LPC</p>
-                    <p class="aircraft-type" style="background-color: rgb(44, 69, 69);">Instructor
-                        Training</p>
-                </div>
-            </div>
-            <br>
-            <!---->
-            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active" data-bs-interval="10000">
-                        <figure class="snip1533">
-                            <figcaption>
-                                <blockquote>
-                                    <p>If you do the job badly enough, sometimes you don't get asked to do it again.
-                                    </p>
-                                </blockquote>
-                                <h3>Wisteria Ravenclaw</h3>
-                            </figcaption>
-                        </figure>
-                    </div>
-                    <div class="carousel-item" data-bs-interval="2000">
-                        <figure class="snip1533">
-                            <figcaption>
-                                <blockquote>
-                                    <p>I'm killing time while I wait for life to shower me with meaning and
-                                        happiness.</p>
-                                </blockquote>
-                                <h3>Ursula Gurnmeister</h3>
+    <div class="container mt-3">
+        <h3>Type Ratings and Training</h1>
+            <p>At Scandinavian Training academy, we provide EASA approved solutions for pilots and AOCS.</p>
+    </div>
 
-                            </figcaption>
-                        </figure>
-                    </div>
-                    <div class="carousel-item">
-                        <figure class="snip1533">
-                            <figcaption>
-                                <blockquote>
-                                    <p>The only skills I have the patience to learn are those that have no real
-                                        application in life. </p>
-                                </blockquote>
-                                <h3>Ingredia Nutrisha</h3>
-
-                            </figcaption>
-                        </figure>
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></p>
-                        <span class="visually-hidden">Previous</p>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></p>
-                        <span class="visually-hidden">Next</p>
-                </button>
-            </div>
+    <div class="plane-container container mt-2">
+        <div class="plane-card">
+            <div style="height: 110px; width: 100%; border: 1px solid black;">
+            <img style="width: 100%; height: 100%;" src="https://images.hothardware.com/contentimages/newsitem/51299/content/16x9_2133x1200_highres-airbus-a320.jpg"></div>
+            <div style="width: 100%;" class="container mt-2"><p>Airbus A320</p></div>
+        </div>
+        <div class="plane-card">
+            <div style="height: 110px; width: 100%; border: 1px solid black;">
+            <img style="width: 100%; height: 100%;" src="https://ing.dk/sites/mi/files/2019-03/66126.jpg"></div>
+            <div style="width: 100%;" class="container mt-2"><p>Boeing 737</p></div>
+        </div>
+        <div class="plane-card">
+            <div style="height: 110px; width: 100%; border: 1px solid black;">
+            <img style="width: 100%; height: 100%;" src="https://d1a2ot8agkqe8w.cloudfront.net/web/2007/10/boeing-777_19790.jpg"></div>
+            <div style="width: 100%;" class="container mt-2"><p>Boeing 777</p></div>
+        </div>
+        <div class="plane-card">
+            <div style="height: 110px; width: 100%; border: 1px solid black;">
+            <img style="width: 100%; height: 100%;" src="https://upload.wikimedia.org/wikipedia/commons/0/0a/Boeing_787_first_flight.jpg"></div>
+            <div style="width: 100%;" class="container mt-2"><p>Boeing 787</p></div>
         </div>
     </div>
 
