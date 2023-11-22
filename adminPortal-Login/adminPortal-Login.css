@@ -1,0 +1,66 @@
+.background-image-container {
+    position: absolute;
+    z-index: -1;
+    max-width: 100vw;
+    overflow: hidden;
+}
+
+.background-image {
+    max-height: 100vh;
+    min-width: 100vw;
+    opacity: 0.4;
+}
+
+body {
+    background-color: rgb(8, 8, 8);
+    height: 100vh;
+    margin: 0;
+    font-family: 'Kanit', sans-serif;
+    color: white;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-container {
+    width: 30%;
+    background-color: aliceblue;
+    opacity: 90%;
+    border-radius: 30px;
+    padding: 30px;
+}
+
+h1 {
+    font-size: 3em;
+    text-align: center;
+    color: darkgray;
+    margin-top: 5px;
+    margin-bottom: 30px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input {
+    width: 60%;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+button {
+    width: 50%;
+    padding: 10px;
+    background-color: #4c57af;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #454ca0;
+}
