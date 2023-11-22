@@ -1,0 +1,168 @@
+body {
+    background-color: rgb(8, 8, 8);
+    height: 100vh;
+    margin: 0;
+    font-family: 'Kanit', sans-serif;
+    color: white;
+    overflow-x: hidden;
+}
+
+h1 {
+    font-size: 5em;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.content-container {
+    display: flex;
+    max-width: 100vw;
+    justify-content: center;
+    overflow: auto;
+    min-height: 85vh;
+
+}
+
+.content {
+    max-width: 95vw;
+    min-height: 75vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+h2 {
+    text-align: center;
+    display: inline;
+}
+
+.aircraft-list {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.aircraft-type {
+    font-size: 20px;
+    padding: 4px;
+    background: rgb(37, 85, 207);
+    margin: 3px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,400);
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css);
+
+.snip1533 {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+    color: #9e9e9e;
+    display: inline-block;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 16px;
+    margin: 35px 10px 10px;
+    max-width: 250px;
+    min-width: 250px;
+    max-height: 225px;
+    min-height: 225px;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 5px;
+    border-top: 5px solid #d2652d;
+}
+
+.snip1533 *,
+.snip1533 *:before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all 0.1s ease-out;
+    transition: all 0.1s ease-out;
+}
+
+.snip1533 figcaption {
+    padding: 13% 10% 12%;
+}
+
+.snip1533 figcaption:before {
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    color: #d2652d;
+    content: "\f10e";
+    font-family: 'FontAwesome';
+    font-size: 32px;
+    font-style: normal;
+    left: 50%;
+    line-height: 60px;
+    position: absolute;
+    top: -30px;
+    width: 60px;
+}
+
+.snip1533 h3 {
+    color: #3c3c3c;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 24px;
+    margin: 0px 0 0px;
+}
+
+.snip1533 h4 {
+    font-weight: 400;
+    margin: 0;
+    opacity: 0.5;
+}
+
+.snip1533 blockquote {
+    font-style: italic;
+    font-weight: 300;
+    margin: 0 0 20px;
+}
+
+.socials {
+    max-height: 30px;
+    margin: 0 1px;
+}
+
+.navbar {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    background: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+
+.navbar-inner-container {
+width: 95vw;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.left-side {
+display: flex;
+align-items: center;
+}
+
+.right-side {
+display: flex;
+}
+
+.background-image-container {
+    position: absolute;
+    z-index: -1;
+    max-width: 100vw;
+    overflow: hidden;
+}
+.background-image{
+    max-height: 100vh; min-width: 100vw; opacity: 1;
+}
+.socials-container {
+    display: flex;
+    width: 90px;
+}
