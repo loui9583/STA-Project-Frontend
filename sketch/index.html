@@ -12,6 +12,30 @@
     <style>
         body {
             font-family: 'Varela Round', sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            background: rgb(247, 247, 247);
+            /* Set minimum height to cover the entire viewport */
+        }
+
+        .wrapper {
+            flex: 1;
+        }
+
+        footer {
+            background-color: #f0f0f0;
+            height: 50px;
+            padding: 10px;
+            /* Adjust padding as needed */
+            margin-top: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .socials {
+            max-width: 30px;
         }
 
         .navbar {
@@ -31,7 +55,6 @@
 
         .plane-card {
             border: 1px solid rgb(174, 174, 174);
-           
             width: 165px;
             margin: 3px;
             border-radius: 5px;
@@ -42,50 +65,250 @@
             justify-content: space-evenly;
             flex-wrap: wrap;
         }
+
+        .client-img {
+            max-width: 25%;
+        }
+
+        #services a {
+            color: blue;
+        }
+
+        #services li {
+            margin: 0.3em;
+        }
+
+        /* Icon set - http://ionicons.com/ */
+        @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css);
+        @import url(https://fonts.googleapis.com/css?family=Raleway:400,800);
+
+        figure.snip1139 {
+            font-family: 'Raleway', Arial, sans-serif;
+            position: relative;
+            overflow: hidden;
+            margin: 10px;
+            min-width: 220px;
+            max-width: 310px;
+            width: 100%;
+            color: #333;
+            text-align: left;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+            border-radius: 8px;
+        }
+
+        figure.snip1139 * {
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            -webkit-transition: all 0.35s cubic-bezier(0.25, 0.5, 0.5, 0.9);
+            transition: all 0.35s cubic-bezier(0.25, 0.5, 0.5, 0.9);
+        }
+
+        figure.snip1139 img {
+            max-width: 100%;
+            vertical-align: middle;
+        }
+
+        figure.snip1139 blockquote {
+            position: relative;
+            background-color: #ffffff;
+            padding: 25px 50px 25px 50px;
+            font-size: 0.8em;
+            font-weight: 500;
+            text-align: left;
+            margin: 0;
+            line-height: 1.6em;
+            font-style: italic;
+        }
+
+        figure.snip1139 blockquote:before,
+        figure.snip1139 blockquote:after {
+            font-family: 'FontAwesome';
+            content: "\201C";
+            position: absolute;
+            font-size: 50px;
+            opacity: 0.3;
+            font-style: normal;
+        }
+
+        figure.snip1139 blockquote:before {
+            top: 25px;
+            left: 20px;
+        }
+
+        figure.snip1139 blockquote:after {
+            content: "\201D";
+            right: 20px;
+            bottom: 0;
+        }
+
+        figure.snip1139 .arrow {
+            top: 100%;
+            width: 0;
+            height: 0;
+            border-left: 0 solid transparent;
+            border-right: 25px solid transparent;
+            border-top: 25px solid #ffffff;
+            margin: 0;
+            position: absolute;
+        }
+
+        figure.snip1139 .author {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            padding: 5px 25px;
+            color: #000000;
+            background-color: #ffffff;
+            margin: 0;
+
+        }
+
+        figure.snip1139 .author h5 {
+            opacity: 0.8;
+            margin: 0;
+            font-weight: 800;
+        }
+
+        figure.snip1139 .author h5 span {
+            font-weight: 400;
+            text-transform: none;
+            padding-left: 5px;
+        }
     </style>
 
 </head>
 
 <body>
 
-
-
-    <div class="navbar">
-        <div class="navbar-inner-container">
+    <div style="max-width: 100%;" class="navbar">
+        <div class="navbar-inner-container container-fluid">
             <img style="max-height: 40px;" src="billeder/STA logo all.png">
             <img style="max-height: 40px;" src="billeder/menu-outline.svg">
         </div>
     </div>
 
-    <img style="max-width: 100vw;" src="billeder\P1010126.jpg">
 
-    <div class="container mt-3">
-        <h3>Type Ratings and Training</h1>
-            <p>At Scandinavian Training academy, we provide EASA approved solutions for pilots and AOCS.</p>
+<div style="width: 100%; display: flex; justify-content: center;"><div style="max-width: 800px; background: white;">
+    <img style="width: 100%;" src="billeder\P1010126.jpg">
+
+    <div class="container-fluid mt-4">
+        <h3 style="text-align: center;"><b>Welcome To Scandinavian Training Academy</b></h1>
+            <p style="text-align: center;">
+                Approved Pilot Training Organisation (ATO) in Copenhagen,
+                Denmark, with multiple centers in Europe and the Middle East. Specializing in Typerating courses for
+                Airbus 320 and Boeing 737/777/787, we are dedicated to delivering top-notch industry standard pilot
+                training
+                experiences.
+            </p>
+    </div>
+    <div id="services" style="flex: 1; background: rgba(187, 229, 243, 0.096); padding-top: 5px; padding-bottom: 5px;" class="container-fluid mt-2">
+        <h3 style="text-align: center;"><b>Our Services Include</b></h1>
+
+            <ul>
+                <li>
+                    <div><b>Type Ratings for Airbus 320 and Boeing 737/777/787&nbsp;</b><a>Learn More</a></div>
+                </li>
+
+                <li>
+                    <div><b>LPC Renewal</b>&nbsp;<a>Learn More</a></div>
+                </li>
+
+                <li>
+                    <div><b>Instructor Training Courses</b>&nbsp;<a>Learn More</a></div>
+                </li>
+            </ul>
+            <div style="width: 100%; text-align: center;">
+                <a>See Complete schedule for all courses</a>
+            </div>
     </div>
 
-    <div class="plane-container container mt-2">
-        <div class="plane-card">
-            <div style="height: 110px; width: 100%; border: 1px solid black;">
-            <img style="width: 100%; height: 100%;" src="https://images.hothardware.com/contentimages/newsitem/51299/content/16x9_2133x1200_highres-airbus-a320.jpg"></div>
-            <div style="width: 100%;" class="container mt-2"><p>Airbus A320</p></div>
-        </div>
-        <div class="plane-card">
-            <div style="height: 110px; width: 100%; border: 1px solid black;">
-            <img style="width: 100%; height: 100%;" src="https://ing.dk/sites/mi/files/2019-03/66126.jpg"></div>
-            <div style="width: 100%;" class="container mt-2"><p>Boeing 737</p></div>
-        </div>
-        <div class="plane-card">
-            <div style="height: 110px; width: 100%; border: 1px solid black;">
-            <img style="width: 100%; height: 100%;" src="https://d1a2ot8agkqe8w.cloudfront.net/web/2007/10/boeing-777_19790.jpg"></div>
-            <div style="width: 100%;" class="container mt-2"><p>Boeing 777</p></div>
-        </div>
-        <div class="plane-card">
-            <div style="height: 110px; width: 100%; border: 1px solid black;">
-            <img style="width: 100%; height: 100%;" src="https://upload.wikimedia.org/wikipedia/commons/0/0a/Boeing_787_first_flight.jpg"></div>
-            <div style="width: 100%;" class="container mt-2"><p>Boeing 787</p></div>
-        </div>
+    <div id="client-container" class="container-fluid mt-5 mb-4 ">
+        <h3 style="text-align: center;"><b>Some companies using our services
+            </b></h1>
+            <div id="clients" style="display: flex; justify-content: center;">
+                <img class="client-img" src="https://scanditraining.com/wp-content/uploads/2022/11/chair.png">
+                <img class="client-img" src="https://scanditraining.com/wp-content/uploads/2022/11/artAviation.png">
+                <img class="client-img" src="https://scanditraining.com/wp-content/uploads/2022/11/finnishGov.png">
+                <img class="client-img" src="https://scanditraining.com/wp-content/uploads/2022/11/norse.png">
+            </div>
     </div>
+
+    <h4 style="text-align: center;" class="mt-4"><b>What our customers say..</b></h4>
+
+    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="5000">
+
+                <figure class="snip1139 mx-auto">
+                    <blockquote>Sometimes I think the surest sign that intelligent life exists elsewhere in the universe
+                        is that none of it has tried to contact us.
+                        <div class="arrow"></div>
+                    </blockquote>
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample3.jpg" alt="sample3" />
+                    <div class="author">
+                        <p class="mt-2">Pelican Steve</p>
+                    </div>
+                </figure>
+
+            </div>
+
+            <div class="carousel-item" data-bs-interval="5000">
+
+                <figure class="snip1139 mx-auto">
+                    <blockquote>I don't need to compromise on my principles, because they don't have the slightest
+                        bearing on what happens to me anyway.
+                        <div class="arrow"></div>
+                    </blockquote>
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample47.jpg" alt="sample47" />
+                    <div class="author">
+                        <p class="mt-2">Max Conversion</p>
+                    </div>
+                </figure>
+
+            </div>
+
+
+            <div class="carousel-item" data-bs-interval="5000">
+
+                <figure class="snip1139 mx-auto">
+                    <blockquote>That's the problem with nature, something's always stinging you or oozing mucous all
+                        over you. Let's go and watch TV.
+                        <div class="arrow"></div>
+                    </blockquote>
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample17.jpg" alt="sample17" />
+                    <div class="author">
+                        <p class="mt-2">Eleanor Faint</p>
+                    </div>
+                </figure>
+
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+            data-bs-slide="prev">
+            <span style="padding: 5px; border-radius: 4px;" class="carousel-control-prev-icon bg-dark"
+                aria-hidden="true"></p>
+                <span class="visually-hidden">Previous</p>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+            data-bs-slide="next">
+            <span style="padding: 5px; border-radius: 5px;" class="carousel-control-next-icon bg-dark"
+                aria-hidden="true"></p>
+                <span class="visually-hidden">Next</p>
+        </button>
+    </div>
+
+
+</div></div>
+    <footer style="display: flex; justify-content: space-between; align-items: center;" class="container-fluid">
+        <a>Contact Us</a>
+
+        <div style="display: flex; justify-content: space-between; width: 105px;">
+            <img class="socials" src="/images/logo-linkedin.svg">
+            <img class="socials" src="/images/logo-instagram.svg">
+            <img class="socials" src="/images/logo-facebook.svg">
+        </div>
+    </footer>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
