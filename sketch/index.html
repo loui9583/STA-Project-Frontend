@@ -19,9 +19,7 @@
             /* Set minimum height to cover the entire viewport */
         }
 
-        .wrapper {
-            flex: 1;
-        }
+
 
         footer {
             background-color: #f0f0f0;
@@ -174,6 +172,154 @@
             text-transform: none;
             padding-left: 5px;
         }
+
+        .ag-format-container {
+            width: 80vw;
+        }
+
+        .ag-coruses-item a p {}
+
+
+        .ag-courses_box {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: start;
+            -ms-flex-align: start;
+            align-items: flex-start;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+
+
+        }
+
+        .ag-courses_item {
+            -ms-flex-preferred-size: calc(30% - 30px);
+            flex-basis: calc(30- 30px);
+
+            margin: 0 15px 30px;
+
+            overflow: hidden;
+
+            border-radius: 28px;
+        }
+
+        .ag-courses-item_link {
+            display: block;
+            padding: 30px 20px;
+            background-color: darkslategrey;
+
+            overflow: hidden;
+
+            position: relative;
+        }
+
+        .ag-courses-item_link,
+        .ag-courses-item_link {
+            color: darkslategray
+        }
+
+
+        .ag-courses-item_link:hover .ag-courses-item_bg {
+            -webkit-transform: scale(10);
+            -ms-transform: scale(10);
+            transform: scale(10);
+        }
+
+        .ag-courses-item_title {
+            min-height: 87px;
+            margin: 0 0 25px;
+
+            overflow: hidden;
+
+            font-weight: bold;
+            font-size: 30px;
+            color: #FFF;
+
+            z-index: 2;
+            position: relative;
+        }
+
+        .ag-courses-item_date-box {
+            font-size: 18px;
+            color: #FFF;
+
+            z-index: 2;
+            position: relative;
+        }
+
+        .ag-courses-item_date {
+            font-weight: bold;
+            color: #f9b234;
+
+            -webkit-transition: color .5s ease;
+            -o-transition: color .5s ease;
+            transition: color .5s ease
+        }
+
+        .ag-courses-item_bg {
+            height: 128px;
+            width: 128px;
+            background-color: #f9b234;
+
+            z-index: 1;
+            position: absolute;
+            top: -75px;
+            right: -75px;
+
+            border-radius: 50%;
+
+            -webkit-transition: all .5s ease;
+            -o-transition: all .5s ease;
+            transition: all .5s ease;
+        }
+
+        .ag-courses_item .ag-courses-item_bg {
+            background-color: #3eb5cd;
+        }
+
+
+
+
+        @media only screen and (max-width: 100vw) {
+            .ag-courses_item {
+                -ms-flex-preferred-size: calc(75% - 30px);
+                flex-basis: calc(50% - 30px);
+            }
+
+            .ag-courses-item_title {
+                font-size: 24px;
+            }
+        }
+
+        @media only screen and (max-width: 100vw) {
+            .ag-format-container {
+                width: 96%;
+            }
+
+        }
+
+        @media only screen and (max-width: 100vw) {
+            .ag-courses_item {
+                -ms-flex-preferred-size: 100%;
+                flex-basis: 100%;
+            }
+
+            .ag-courses-item_title {
+                min-height: 72px;
+                line-height: 1;
+
+                font-size: 24px;
+            }
+
+            .ag-courses-item_link {
+                padding: 22px 40px;
+            }
+
+            .ag-courses-item_date-box {
+                font-size: 16px;
+            }
+        }
     </style>
 
 </head>
@@ -188,117 +334,200 @@
     </div>
 
 
-<div style="width: 100%; display: flex; justify-content: center;"><div style="max-width: 800px; background: white;">
-    <img style="width: 100%;" src="billeder\P1010126.jpg">
+    <div style="width: 100%; display: flex; justify-content: center;">
+        <div style="max-width: 800px; background: white;">
+            <img style="width: 100%;" src="billeder\P1010126.jpg">
 
-    <div class="container-fluid mt-4">
-        <h3 style="text-align: center;"><b>Welcome To Scandinavian Training Academy</b></h1>
-            <p style="text-align: center;">
-                Approved Pilot Training Organisation (ATO) in Copenhagen,
-                Denmark, with multiple centers in Europe and the Middle East. Specializing in Typerating courses for
-                Airbus 320 and Boeing 737/777/787, we are dedicated to delivering top-notch industry standard pilot
-                training
-                experiences.
-            </p>
-    </div>
-    <div id="services" style="flex: 1; background: rgba(187, 229, 243, 0.096); padding-top: 5px; padding-bottom: 5px;" class="container-fluid mt-2">
-        <h3 style="text-align: center;"><b>Our Services Include</b></h1>
-
-            <ul>
-                <li>
-                    <div><b>Type Ratings for Airbus 320 and Boeing 737/777/787&nbsp;</b><a>Learn More</a></div>
-                </li>
-
-                <li>
-                    <div><b>LPC Renewal</b>&nbsp;<a>Learn More</a></div>
-                </li>
-
-                <li>
-                    <div><b>Instructor Training Courses</b>&nbsp;<a>Learn More</a></div>
-                </li>
-            </ul>
-            <div style="width: 100%; text-align: center;">
-                <a>See Complete schedule for all courses</a>
+            <div class="container-fluid mt-4">
+                <h3 style="text-align: center;"><b>Welcome To Scandinavian Training Academy</b></h1>
+                    <p style="text-align: center;">
+                        Approved Pilot Training Organisation (ATO) in Copenhagen,
+                        Denmark, with multiple centers in Europe and the Middle East. Specializing in Typerating courses
+                        for
+                        Airbus 320 and Boeing 737/777/787, we are dedicated to delivering top-notch industry standard
+                        pilot
+                        training
+                        experiences.
+                    </p>
             </div>
-    </div>
+            
+            <div id="services"
+                style="flex: 1; background: rgba(187, 229, 243, 0.096); padding-top: 5px; padding-bottom: 5px;"
+                class="container-fluid mt-2">
+                <h3 style="text-align: center;"><b>Our Services Include</b></h1>
 
-    <div id="client-container" class="container-fluid mt-5 mb-4 ">
-        <h3 style="text-align: center;"><b>Some companies using our services
-            </b></h1>
-            <div id="clients" style="display: flex; justify-content: center;">
-                <img class="client-img" src="https://scanditraining.com/wp-content/uploads/2022/11/chair.png">
-                <img class="client-img" src="https://scanditraining.com/wp-content/uploads/2022/11/artAviation.png">
-                <img class="client-img" src="https://scanditraining.com/wp-content/uploads/2022/11/finnishGov.png">
-                <img class="client-img" src="https://scanditraining.com/wp-content/uploads/2022/11/norse.png">
-            </div>
-    </div>
 
-    <h4 style="text-align: center;" class="mt-4"><b>What our customers say..</b></h4>
+                    <p
+                        style="text-align: center; background: #4d84bc; color: white; border-radius: 8px; margin-bottom: 7px; padding: 5px;">
+                        <b>Type
+                            Ratings for Airbus 320 and Boeing 737/777/787</b>
+                    </p>
+                    <p
+                        style="text-align: center; background:#42709f; color: white; border-radius: 8px; margin: 0; padding: 5px">
+                        <b>LPC
+                            Renewal</b>
+                    </p>
+                    <p
+                        style="text-align: center; background:#365c83; color: white; border-radius: 8px; margin-top: 7px; padding: 5px">
+                        <b>Instructor
+                            Training Courses</b>
+                    </p>
+                    <div style="width: 100%; text-align: center;">
 
-    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active" data-bs-interval="5000">
-
-                <figure class="snip1139 mx-auto">
-                    <blockquote>Sometimes I think the surest sign that intelligent life exists elsewhere in the universe
-                        is that none of it has tried to contact us.
-                        <div class="arrow"></div>
-                    </blockquote>
-                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample3.jpg" alt="sample3" />
-                    <div class="author">
-                        <p class="mt-2">Pelican Steve</p>
                     </div>
-                </figure>
-
             </div>
-
-            <div class="carousel-item" data-bs-interval="5000">
-
-                <figure class="snip1139 mx-auto">
-                    <blockquote>I don't need to compromise on my principles, because they don't have the slightest
-                        bearing on what happens to me anyway.
-                        <div class="arrow"></div>
-                    </blockquote>
-                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample47.jpg" alt="sample47" />
-                    <div class="author">
-                        <p class="mt-2">Max Conversion</p>
-                    </div>
-                </figure>
-
-            </div>
-
-
-            <div class="carousel-item" data-bs-interval="5000">
-
-                <figure class="snip1139 mx-auto">
-                    <blockquote>That's the problem with nature, something's always stinging you or oozing mucous all
-                        over you. Let's go and watch TV.
-                        <div class="arrow"></div>
-                    </blockquote>
-                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample17.jpg" alt="sample17" />
-                    <div class="author">
-                        <p class="mt-2">Eleanor Faint</p>
-                    </div>
-                </figure>
-
-            </div>
+            <div style="background: #EFEFEF; border-radius: 10px;" class="container-fluid mb-4  pt-2 pb-2">
+                   
+                   
+                <img src="billeder/valuesicons.png" style="max-width: 100%;">
+  
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
-            data-bs-slide="prev">
-            <span style="padding: 5px; border-radius: 4px;" class="carousel-control-prev-icon bg-dark"
-                aria-hidden="true"></p>
-                <span class="visually-hidden">Previous</p>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
-            data-bs-slide="next">
-            <span style="padding: 5px; border-radius: 5px;" class="carousel-control-next-icon bg-dark"
-                aria-hidden="true"></p>
-                <span class="visually-hidden">Next</p>
-        </button>
+
+            <h3 class="mt-3" style="text-align: center;"><b>Upcoming Courses</b></h1>
+                <div style="max-width: 100%;" class="ag-format-container">
+                    <div class="ag-courses_box">
+
+
+                        <div class="ag-courses_item">
+                            <a class="ag-courses-item_link">
+                                <div class="ag-courses-item_bg"></div>
+
+                                <div class="ag-courses-item_title">
+                                    Type Rating - <br>Boing 777
+                                </div>
+
+                                <div style="display: flex; justify-content: space-between; align-items: center;"
+                                    class="ag-courses-item_date-box">
+                                    <div>
+                                        Start:
+                                        <span class="ag-courses-item_date">
+                                            04.11.2022
+                                        </span>
+                                    </div>
+                                    <span style="padding: 4px; border-radius: 5px;"><b>Learn More</b></span>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="ag-courses_item">
+                            <a class="ag-courses-item_link">
+                                <div class="ag-courses-item_bg"></div>
+
+                                <div class="ag-courses-item_title">
+                                    Type Rating - <br>Airbus A320
+                                </div>
+
+                                <div style="display: flex; justify-content: space-between; align-items: center;"
+                                    class="ag-courses-item_date-box">
+                                    <div>
+                                        Start:
+                                        <span class="ag-courses-item_date">
+                                            04.11.2022
+                                        </span>
+                                    </div>
+                                    <span style="padding: 4px; border-radius: 5px;"><b>Learn More</b></span>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div id="client-container" class="container-fluid mt-5 mb-4 ">
+                    <h3 style="text-align: center;"><b>Some companies using our services
+                        </b></h1>
+                        <div id="clients" style="display: flex; justify-content: center;">
+                            <img class="client-img"
+                                src="https://scanditraining.com/wp-content/uploads/2022/11/chair.png">
+                            <img class="client-img"
+                                src="https://scanditraining.com/wp-content/uploads/2022/11/artAviation.png">
+                            <img class="client-img"
+                                src="https://scanditraining.com/wp-content/uploads/2022/11/finnishGov.png">
+                            <img class="client-img"
+                                src="https://scanditraining.com/wp-content/uploads/2022/11/norse.png">
+                        </div>
+                </div>
+
+                <h4 style="text-align: center;" class="mt-4"><b>What our customers say..</b></h4>
+
+                <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" data-bs-interval="5000">
+
+                            <figure class="snip1139 mx-auto">
+                                <blockquote>Sometimes I think the surest sign that intelligent life exists elsewhere in
+                                    the
+                                    universe
+                                    is that none of it has tried to contact us.
+                                    <div class="arrow"></div>
+                                </blockquote>
+                                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample3.jpg"
+                                    alt="sample3" />
+                                <div class="author">
+                                    <p class="mt-2">Pelican Steve</p>
+                                </div>
+                            </figure>
+
+                        </div>
+
+                        <div class="carousel-item" data-bs-interval="5000">
+
+                            <figure class="snip1139 mx-auto">
+                                <blockquote>I don't need to compromise on my principles, because they don't have the
+                                    slightest
+                                    bearing on what happens to me anyway.
+                                    <div class="arrow"></div>
+                                </blockquote>
+                                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample47.jpg"
+                                    alt="sample47" />
+                                <div class="author">
+                                    <p class="mt-2">Max Conversion</p>
+                                </div>
+                            </figure>
+
+                        </div>
+
+
+                        <div class="carousel-item" data-bs-interval="5000">
+
+                            <figure class="snip1139 mx-auto">
+                                <blockquote>That's the problem with nature, something's always stinging you or oozing
+                                    mucous
+                                    all
+                                    over you. Let's go and watch TV.
+                                    <div class="arrow"></div>
+                                </blockquote>
+                                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample17.jpg"
+                                    alt="sample17" />
+                                <div class="author">
+                                    <p class="mt-2">Eleanor Faint</p>
+                                </div>
+                            </figure>
+
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+                        data-bs-slide="prev">
+                        <span style="padding: 5px; border-radius: 4px;" class="carousel-control-prev-icon bg-dark"
+                            aria-hidden="true"></p>
+                            <span class="visually-hidden">Previous</p>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+                        data-bs-slide="next">
+                        <span style="padding: 5px; border-radius: 5px;" class="carousel-control-next-icon bg-dark"
+                            aria-hidden="true"></p>
+                            <span class="visually-hidden">Next</p>
+                    </button>
+                </div>
+                
+                <div class="container-fluid mt-4">
+                    <h3 style="text-align: center;"><b>Highly qualified Instructor Team</b></h1>
+                        <p style="text-align: center;">
+                            Central to the Scandinavian Training Academy experience is our instructor team, who form the backbone of our organisation. With a genuine passion for teaching, they foster an environment that encourages growth and development for all pilots. At Scandinavian Training Academy, you’re more than just a student enrolled in a Typerating or Proficiency Check course. We firmly believe that robust relationships are foundational to achieving success. Despite our global reach, we’re not a large organisation where you are reduced to a mere number. Our commitment to personalised service is infused into every interaction – whether it involves responding to your queries, tending to your concerns, or celebrating your accomplishments. Your success is our success, and we are with you all the way until you pass your Typerating or your Proficiency Check. At Scandinavian Training Academy we make training simple!
+                        </p>
+                </div>
+        </div>
     </div>
-
-
-</div></div>
     <footer style="display: flex; justify-content: space-between; align-items: center;" class="container-fluid">
         <a>Contact Us</a>
 
