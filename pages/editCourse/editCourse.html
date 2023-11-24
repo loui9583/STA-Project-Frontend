@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <h1>Edit Course</h1>
+        <input type="text" id="courseId">
+        <button id="fetchbtn">Search</button>
+    </div>
+
+    <div>
+        <form>
+            <label for="courseDate">Course Date:</label>
+            <input type="date" id="courseDate" name="courseDate"><br><br>
+
+            <label for="courseLocation">Course Location:</label>
+            <input type="text" id="courseLocation" name="courseLocation"><br><br>
+
+            <label for="courseType">Course Type:</label>
+            <input type="text" id="courseType" name="courseType"><br><br>
+
+            <label for="airplaneId">Airplane ID:</label>
+            <input type="text" id="airplaneId" name="airplaneId"><br><br>
+
+            <label for="simulatorType">Simulator Type:</label>
+            <input type="text" id="simulatorType" name="simulatorType"><br><br>
+
+            <label for="coursePrice">Course Price:</label>
+            <input type="number" id="coursePrice" name="coursePrice"><br><br>
+
+            <label for="easaApproved">EASA Approved:</label>
+            <input type="checkbox" id="easaApproved" name="easaApproved"><br><br>
+
+            <label for="atplUnfreezing">ATPL Unfreezing Possible:</label>
+            <input type="checkbox" id="atplUnfreezing" name="atplUnfreezing"><br><br>
+            <button id="editbtn" type="submit">Edit Course</button>
+        </form>
+        <!-- Add this div for displaying the edit status -->
+        <div id="editStatus"></div>
+    </div>
+
+    <script src="editCourse.js"></script>
+</body>
+
+</html>
