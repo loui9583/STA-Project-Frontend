@@ -53,10 +53,12 @@ document.addEventListener('DOMContentLoaded', function () {
             console.log('Response data:', responseData);
 
             editStatus.textContent = 'Edit complete';
+            editStatus.style.color = 'green';
 
         } catch (error) {
             console.error('Error editing course:', error);
             editStatus.textContent = 'Edit failed';
+            editStatus.style.color = 'red';
         }
     });
 });
