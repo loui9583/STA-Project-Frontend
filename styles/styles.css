@@ -94,7 +94,6 @@ header {
     flex-direction: column;
     justify-content: center;
     z-index: 100;
-    -webkit-appearance: none;
     border: 0;
     background: transparent;
     border-radius: 0;
@@ -250,7 +249,6 @@ a {
     width: 80vw;
 }
 
-.ag-coruses-item a p {}
 
 
 .ag-courses_box {
