@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .service-item {
+            position: relative;
+            text-align: center;
+            color: white;
+            background: #4d84bc;
+            border-radius: 8px;
+            margin-bottom: 7px;
+            padding: 5px;
+            overflow: hidden;
+            z-index: 1; /* Ensure text is above pseudo-element */
+        }
+
+        .service-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0; /* Adjusted from left to right */
+            width: 3%; /* Set the width to 50% for a half-circle effect */
+            height: 100%;
+            background: black;
+            transition: width 1s ease; /* Use width for the growing effect */
+            z-index: -1; /* Ensure pseudo-element is below text */
+            border-end-start-radius: 35px;
+            
+        }
+
+        .service-item:hover::before {
+            width: 85%; /* Grow to full width on hover */
+        }
+    </style>
+</head>
+<body>
+
+    <p class="service-item"><b>Type Ratings for Airbus 320 and Boeing 737/777/787</b></p>
+
+</body>
+</html>

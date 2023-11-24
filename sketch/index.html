@@ -271,7 +271,7 @@
 
             -webkit-transition: all .5s ease;
             -o-transition: all .5s ease;
-            transition: all .5s ease;
+            transition: all 1s ease;
         }
 
         .ag-courses_item .ag-courses-item_bg {
@@ -319,6 +319,36 @@
             .ag-courses-item_date-box {
                 font-size: 16px;
             }
+            .service-item {
+            position: relative;
+            text-align: center;
+            color: white;
+            background: #4d84bc;
+            border-radius: 8px;
+            margin-bottom: 7px;
+            padding: 5px;
+            overflow: hidden;
+            z-index: 1; /* Ensure text is above pseudo-element */
+        }
+
+        .service-item::before {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            right: 0; /* Adjusted from left to right */
+            width: 25px; /* Set the width to 50% for a half-circle effect */
+            height: 15px;
+            background: rgb(52, 52, 52);
+            transition: width 1s ease; /* Use width for the growing effect */
+            z-index: -1; /* Ensure pseudo-element is below text */
+            border-top-left-radius: 35px;
+            
+        }
+
+        .service-item:hover::before {
+          
+            width: 95%; /* Grow to full width on hover */
+        }
         }
     </style>
 
@@ -358,17 +388,17 @@
 
 
                     <p
-                        style="text-align: center; background: #4d84bc; color: white; border-radius: 8px; margin-bottom: 7px; padding: 5px;">
+                        style="background: #4d84bc;" class="service-item">
                         <b>Type
                             Ratings for Airbus 320 and Boeing 737/777/787</b>
                     </p>
                     <p
-                        style="text-align: center; background:#42709f; color: white; border-radius: 8px; margin: 0; padding: 5px">
+                        style="background:#42709f;" class="service-item">
                         <b>LPC
                             Renewal</b>
                     </p>
                     <p
-                        style="text-align: center; background:#365c83; color: white; border-radius: 8px; margin-top: 7px; padding: 5px">
+                        style="background:#365c83;" class="service-item">
                         <b>Instructor
                             Training Courses</b>
                     </p>
@@ -376,13 +406,7 @@
 
                     </div>
             </div>
-            <div style="background: #EFEFEF; border-radius: 10px;" class="container-fluid mb-4  pt-2 pb-2">
-                   
-                   
-                <img src="billeder/valuesicons.png" style="max-width: 100%;">
   
-        </div>
-
             <h3 class="mt-3" style="text-align: center;"><b>Upcoming Courses</b></h1>
                 <div style="max-width: 100%;" class="ag-format-container">
                     <div class="ag-courses_box">
@@ -520,12 +544,14 @@
                     </button>
                 </div>
                 
-                <div class="container-fluid mt-4">
-                    <h3 style="text-align: center;"><b>Highly qualified Instructor Team</b></h1>
-                        <p style="text-align: center;">
-                            Central to the Scandinavian Training Academy experience is our instructor team, who form the backbone of our organisation. With a genuine passion for teaching, they foster an environment that encourages growth and development for all pilots. At Scandinavian Training Academy, you’re more than just a student enrolled in a Typerating or Proficiency Check course. We firmly believe that robust relationships are foundational to achieving success. Despite our global reach, we’re not a large organisation where you are reduced to a mere number. Our commitment to personalised service is infused into every interaction – whether it involves responding to your queries, tending to your concerns, or celebrating your accomplishments. Your success is our success, and we are with you all the way until you pass your Typerating or your Proficiency Check. At Scandinavian Training Academy we make training simple!
-                        </p>
+                <div class="container-fluid mt-4    ">
+                    <h3 style="font-weight: 50;">We Make Training Simple!</h1>
                 </div>
+
+
+
+                
+
         </div>
     </div>
     <footer style="display: flex; justify-content: space-between; align-items: center;" class="container-fluid">
