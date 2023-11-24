@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h3>Add course</h3>
+        <div>
+            <form id="courseForm">
+                <div>
+                    <label for="courseType">Type</label>
+                </div>
+                <div>
+                    <select name="trainingType" id="courseType">
+                        <option value="">Select an option</option>
+                        <option value="LPC">LPC</option>
+                        <option value="Typerating">Typerating</option>
+                        <option value="Instructor">Instructor</option>
+                      </select>
+                </div>
+                <div>
+                    <label for="airplaneId">Airplane Type</label>
+                </div>
+                <div>
+                    <select name="airplaneType" id="airplaneId"></select>
+                </div>
+                <div>
+                    <label for="courseLocation">Venue</label>
+                </div>
+                <div>
+                    <select name="venue" id="courseLocation">
+                        <option>Select an option</option>
+                        <option value="Munich"></option>
+                        <option value="Dubai"></option>
+                        <option value="Copenhagen"></option>
+                    </select>
+                </div>
+                <div>
+                    <label for="simulatorType" id="simulator">Simulator type</label>
+                </div>
+                <div>
+                    <input id="simulatorType" required>
+                </div>
+                <div>
+                    <label for="ESEA">ESEA approval</label>
+                </div>
+                <div>
+                    <select name="ESEA "id="ESEA">
+                        <option>Yes</option>
+                        <option>No</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="ATPL">Is ATPL unfreezing possible</label>
+                </div>
+                <div>
+                    <select name="ATPL "id="ATPL">
+                        <option>Yes</option>
+                        <option>No</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="price">Price from</label>
+                </div>
+                <div>
+                    <input name="price" id="price">
+                </div>
+                <div>
+                    <label for="date">Course date</label>
+                </div>
+                <div>
+                    <input id="date" name="date" type="date">
+                </div>
+            </form>
+        </div>
+        <button id="addCourse">Add course</button>
+    </div>
+    <script src="addCourse.js"></script>
+</body>
+
+</html>
