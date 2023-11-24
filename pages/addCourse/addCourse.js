@@ -17,7 +17,7 @@ document.querySelector("#addCourse").addEventListener("click", async () => addCo
 loadPlanes()
 
 async function loadPlanes(){
-    console.log("i was c<lled")
+    console.log("i was called")
     let airplanes = document.querySelector("#airplaneId")
     try {
         const response = await fetch(API_URL + "airplanes");
@@ -39,19 +39,22 @@ async function loadPlanes(){
         console.error('There was a problem fetching the data:', error);
       }
     };
-    document.querySelector("#addCourse").addEventListener("click", async () => addCourse())
+
+document.querySelector("#addCourse").addEventListener("click", async () => addCourse())
 
 async function addCourse(){
-    const form = document.querySelector("#carForm")
+    const status = document.querySelector("#add-course-status")
+    const form = document.querySelector("#courseForm")
     const newCourse = {
-        type: form.trainingType.value,
-        airplane: form.airplaneType.value, //airplanes needs to be fetched from db
-        venue: form.venue.value,
+        courseDate: form.date.value,
+        courseLocation: form.courseLocation.value,
+        airplaneId: form.airplaneId.value,
+        courseType: form.courseType.value,
         simulatorType: form.simulatorType.value,
-        ESEA: form.ESEA.value,
-        ATPL: form.ATPL.value,
-        price: parseFloat(form.price.value),
-        date: form.date.value
+        coursePrice: parseFloat(form.price.value),
+        isEASAAApproved: form.ESEA.value,
+        isATPUnfreezingPossible: form.ATPL.value, // Corrected property access
+        
     };
 
     const options = {
@@ -63,14 +66,31 @@ async function addCourse(){
     };
 
     try {
-        const response = await fetch(API_URL +"courses", options);
-        const courseResponse = await response.json();
-        console.log('Course added:', courseResponse);
-        // Optionally, do something with the response
+        const response = await fetch(API_URL + "courses", options);
+
+        if (!response.ok) {
+            // Check for specific HTTP status codes that indicate authorization issues
+            if (response.status === 401 || response.status === 403) {
+                // Handle unauthorized access
+                status.textContent = "Unauthorized access. Please log in.";
+                // Perform additional actions like redirecting to a login page or showing a modal
+            } else {
+                // Handle other non-authorization-related HTTP errors
+                throw new Error('HTTP error: ' + response.status);
+            }
+        } else {
+            // Proceed with handling successful response
+            const courseResponse = await response.json();
+            console.log('Course added:', courseResponse);
+            status.textContent = "Course added successfully";
+            // Optionally, do something with the response
+        }
     } catch (error) {
         console.error('Error adding course:', error);
-        // Handle errors, show an error message to the user, etc.
+        status.textContent = "Error adding course";
+        // Handle other errors, such as network issues, parsing JSON, etc.
     }
 };
+
 
 
