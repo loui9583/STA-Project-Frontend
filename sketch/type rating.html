@@ -11,7 +11,26 @@
 
     <style>
         body {
+            height: 100svh;
             font-family: 'Varela Round', sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            background: rgb(247, 247, 247);
+        }
+
+        footer {
+            background-color: #f0f0f0;
+            height: 50px;
+            padding: 10px;
+            margin-top: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .socials {
+            max-width: 30px;
         }
 
         .navbar {
@@ -27,65 +46,45 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-        }
-
-        .plane-card {
-            border: 1px solid rgb(174, 174, 174);
-           
-            width: 165px;
-            margin: 3px;
-            border-radius: 5px;
-        }
-
-        .plane-container {
-            display: flex;
-            justify-content: space-evenly;
-            flex-wrap: wrap;
-        }
+        }        
     </style>
 
 </head>
 
 <body>
-
-
-
-    <div class="navbar">
-        <div class="navbar-inner-container">
+    <div style="max-width: 100%;" class="navbar">
+        <div class="navbar-inner-container container-fluid">
             <img style="max-height: 40px;" src="billeder/STA logo all.png">
             <img style="max-height: 40px;" src="billeder/menu-outline.svg">
         </div>
     </div>
 
-    <img style="max-width: 100vw;" src="billeder\P1010126.jpg">
+    <div style="width: 100%; display: flex; justify-content: center;">
+        <div style="max-width: 800px; background: white;">
+            <img style="width: 100%;" src="/images/Throttel.jpeg">
 
-    <div class="container mt-3">
-        <h3>Type Ratings and Training</h1>
-            <p>At Scandinavian Training academy, we provide EASA approved solutions for pilots and AOCS.</p>
-    </div>
+            <div class="container-fluid mt-4">
+                <h3 style="text-align: center;"><b>Type Ratings</b></h1>
+                    <p style="text-align: center;">
+                      
+                    </p>
+            </div>
+         </div>
+         </div>   
+          
 
-    <div class="plane-container container mt-2">
-        <div class="plane-card">
-            <div style="height: 110px; width: 100%; border: 1px solid black;">
-            <img style="width: 100%; height: 100%;" src="https://images.hothardware.com/contentimages/newsitem/51299/content/16x9_2133x1200_highres-airbus-a320.jpg"></div>
-            <div style="width: 100%;" class="container mt-2"><p>Airbus A320</p></div>
+
+
+    <footer style="display: flex; justify-content: space-between; align-items: center;" class="container-fluid">
+        <a>Contact Us</a>
+
+        <div style="display: flex; justify-content: space-between; width: 105px;">
+            <img class="socials" src="/images/logo-linkedin.svg">
+            <img class="socials" src="/images/logo-instagram.svg">
+            <img class="socials" src="/images/logo-facebook.svg">
         </div>
-        <div class="plane-card">
-            <div style="height: 110px; width: 100%; border: 1px solid black;">
-            <img style="width: 100%; height: 100%;" src="https://ing.dk/sites/mi/files/2019-03/66126.jpg"></div>
-            <div style="width: 100%;" class="container mt-2"><p>Boeing 737</p></div>
-        </div>
-        <div class="plane-card">
-            <div style="height: 110px; width: 100%; border: 1px solid black;">
-            <img style="width: 100%; height: 100%;" src="https://d1a2ot8agkqe8w.cloudfront.net/web/2007/10/boeing-777_19790.jpg"></div>
-            <div style="width: 100%;" class="container mt-2"><p>Boeing 777</p></div>
-        </div>
-        <div class="plane-card">
-            <div style="height: 110px; width: 100%; border: 1px solid black;">
-            <img style="width: 100%; height: 100%;" src="https://upload.wikimedia.org/wikipedia/commons/0/0a/Boeing_787_first_flight.jpg"></div>
-            <div style="width: 100%;" class="container mt-2"><p>Boeing 787</p></div>
-        </div>
-    </div>
+    </footer>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
