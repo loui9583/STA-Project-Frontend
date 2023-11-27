@@ -1,82 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../../styles/styles.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | ScandiTraining</title>
+  <link rel="icon" href="../../images/stalogo.png" type="image/x-icon">
+  <link rel="stylesheet" href="../../styles/styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <style>
+    h1 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    h2,
+    h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    p {
+      font-size: 1rem;
+      font-weight: 400;
+      margin-bottom: 1rem;
+    }
+
+    .container {
+      width: 90%;
+      margin: 0 auto;
+    }
+
+    .cockpit-img {
+      width: 100%;
+      height: auto;
+    }
+
+    .image-text {
+      text-align: center;
+      color: white;
+      font-size: 1rem;
+      font-weight: 500;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 65%;
+    }
+
+    .image-text h2 {
+      font-size: 1rem;
+    }
+
+    .content-section {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+
+    .text-container {
+      width: 100%;
+    }
+
+    .image-section-container {
+      width: 100%;
+    }
+
+    .image-section-container img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    @media (max-width: 767px) {
+      .image-text p {
+        display: none;
+      }
+
+      .cockpit-img {
+        height: 300px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .image-text p {
+        display: block;
+      }
+
+      .cockpit-img {
+        height: 700px;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      h2,
+      h3 {
+        font-size: 1.75rem;
+      }
+
+      p {
+        font-size: 1.2rem;
+      }
+
+      .container {
+        width: 80%;
+      }
+
+      .image-section-container img {
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+      }
+    }
+  </style>
 </head>
+
 <body>
-    <header tabindex="0">Header
-        <img style="max-height: 40px; left:0; position: absolute;" src="../../images/STA logo all.png">
-    </header>
-    <div id="nav-container">
-      <div class="bg"></div>
-      <div class="nav-button" tabindex="0">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </div>
-      <div id="nav-content" tabindex="0">
-        <ul class="nav-links">
-          <li><a href="#0">Home</a></li>
-          <li><a href="#0">Services</a></li>
-          <li><a href="#0">Blog</a></li>
-          <li><a href="#0">About</a></li>
-          <li><a href="#0">Contact</a></li>
-          <li class="nav-socials"><a href="#0">Facebook</a><a href="#0">Instagram</a></li>
-        </ul>
-      </div>
+  <header tabindex="0">Header
+    <img style="max-height: 40px; left:0; position: absolute;" src="../../images/STA logo all.png">
+  </header>
+  <div id="nav-container">
+    <div class="bg"></div>
+    <div class="nav-button" tabindex="0">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
     </div>
-    <main>
-        <div class="m-2">
-        <p>
-            <h1>About</h1>
-            <h2>Welcome To Scandinavian Training Academy</h2>
-Welcome to Scandinavian Training Academy, an Approved pilot Training Organisation (ATO) located in Copenhagen, Denmark, with multiple centers across Europe and the Middle East.
+    <div id="nav-content" tabindex="0">
+      <ul class="nav-links">
+        <li><a href="#0">Home</a></li>
+        <li><a href="#0">Services</a></li>
+        <li><a href="#0">Blog</a></li>
+        <li><a href="#0">About</a></li>
+        <li><a href="#0">Contact</a></li>
+        <li class="nav-socials"><a href="#0">Facebook</a><a href="#0">Instagram</a></li>
+      </ul>
+    </div>
+  </div>
 
-We offer a range of Typerating courses and Proficiency training primarily focused on Airbus 320 and Boeing 737 and 787 – some of the world’s most prominent and widely used aircraft models.
+  <div class="image-container" style="position: relative;">
+    <div class="image-text">
+      <h1>Scandinavian Training Academy</h1>
+      <p>Welcome to Scandinavian Training Academy, an Approved pilot Training Organisation (ATO) located in Copenhagen,
+        Denmark, with multiple centers across Europe and the Middle East.</p>
+    </div>
+    <div style="overflow: hidden; display: flex; align-items: end;">
+      <img class="cockpit-img" src="/images/P1010451.jpg">
+    </div>
+  </div>
 
-We are dedicated to delivering unparalleled pilot training experiences and quality, that set the standard for excellence in the industry.
+  <div class="container">
+    <section class="content-section">
+      <div class="text-container txt-container-big">
+        <h2>Welcome to Scandinavian Training Academy</h2>
+        <p>We offer a range of Typerating courses and Proficiency training primarily focused on Airbus 320 and Boeing
+          737
+          and
+          787 – some of the world’s most prominent and widely used aircraft models.</p>
 
-<h3>Relentless focus on quality, flexibility and personal service</h3>
-We are proud to deliver exceptional Typerating og Proficiency training experiences, and setting the industry standard for excellence.
+        <p>We are dedicated to delivering unparalleled pilot training experiences and quality, that set the standard
+          for
+          excellence in the industry.</p>
+      </div>
+      <div class="image-section-container">
+        <img src="/images/P1010126.jpg" alt="Image Description">
+      </div>
+    </section>
 
-With focus on quality, flexibility, and personal service, we prioritise meeting the aviation industry’s demanding standards of proficiency and skill.
+    <section class="content-section">
+      <div class="text-container">
+        <h3>Quality, Flexibility and Personal Service</h3>
 
-To achieve thise high Typerating and Proficiency standards, our team comprises experienced aviation professionals, bringing decades of real-world expertise to both the classroom and the cockpit. Our instructors are not solely educators; they are also mentors, passionately committed to nurturing the next generation of skilled aviators.
+        <p>We are proud to deliver exceptional Typerating og Proficiency training experiences, and setting the
+          industry
+          standard for excellence.</p>
 
-Crafted with meticulous care, our Typerating and Proficiency training programs equip you with the skills and knowledge essential for a successful aviation journey. Regardless of whether you’re a seasoned pilot aiming to expand your horizons or a new aviator embarking on an aviation career, our comprehensive programs are tailored to address your unique needs.
+        <p>With focus on quality, flexibility, and personal service, we prioritise meeting the aviation industry’s
+          demanding
+          standards of proficiency and skill.</p>
 
-<h3>Highly qualified Instructor team</h3>
-Central to the Scandinavian Training Academy experience is our instructor team, who form the backbone of our organisation. With a genuine passion for teaching, they foster an environment that encourages growth and development for all pilots.
-
-At Scandinavian Training Academy, you’re more than just a student enrolled in a Typerating or Proficiency Check course. We firmly believe that robust relationships are foundational to achieving success.
-
-Despite our global reach, we’re not a large organisation where you are reduced to a mere number. Our commitment to personalised service is infused into every interaction – whether it involves responding to your queries, tending to your concerns, or celebrating your accomplishments.
-
-Your success is our success, and we are with you all the way until you pass your Typerating or your Proficiency Check.
-
-
-At Scandinavian Training Academy we make training simple!
-
-<h2>Meet our team</h2>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis reiciendis in dolorem labore, repudiandae, sequi cupiditate consequuntur totam nihil error minima quo ullam vitae neque quod accusantium nesciunt ratione veritatis.</p>
-<img src="../../images/placeholder-portrait.jpg" alt="Placeholder Image">
-
+        <p>To achieve thise high Typerating and Proficiency standards, our team comprises experienced aviation
+          professionals,
+          bringing decades of real-world expertise to both the classroom and the cockpit. Our instructors are not
+          solely
+          educators; they are also mentors, passionately committed to nurturing the next generation of skilled
+          aviators.
         </p>
-        </div>
-    </main>
-    <footer style="display: flex; justify-content: space-between; align-items: center;" class="container-fluid">
-        <a>Contact Us</a>
 
-        <div style="display: flex; justify-content: space-between; width: 105px;">
-            <img class="socials" src="../../images/logo-linkedin.svg">
-            <img class="socials" src="../../images/logo-instagram.svg">
-            <img class="socials" src="../../images/logo-facebook.svg">
-        </div>
-    </footer>
+        <p>Crafted with meticulous care, our Typerating and Proficiency training programs equip you with the skills
+          and
+          knowledge essential for a successful aviation journey. Regardless of whether you’re a seasoned pilot aiming
+          to
+          expand your horizons or a new aviator embarking on an aviation career, our comprehensive programs are
+          tailored
+          to
+          address your unique needs.</p>
+      </div>
+      <div class="image-section-container">
+        <img src="/images/P1010465.jpg" alt="Image Description">
+      </div>
+    </section>
+
+    <h3>Highly Qualified Instructor Team</h3>
+
+    <p>Central to the Scandinavian Training Academy experience is our instructor team, who form the backbone of our
+      organisation. With a genuine passion for teaching, they foster an environment that encourages growth and
+      development for all pilots.</p>
+
+    <p>At Scandinavian Training Academy, you’re more than just a student enrolled in a Typerating or Proficiency Check
+      course. We firmly believe that robust relationships are foundational to achieving success.</p>
+
+    <p>Despite our global reach, we’re not a large organisation where you are reduced to a mere number. Our commitment
+      to
+      personalised service is infused into every interaction – whether it involves responding to your queries, tending
+      to your concerns, or celebrating your accomplishments.</p>
+
+    <p>Your success is our success, and we are with you all the way until you pass your Typerating or your Proficiency
+      Check.</p>
+
+    <p>At Scandinavian Training Academy we make training simple!</p>
+
+  </div>
+  </main>
+  <footer style="display: flex; justify-content: space-between; align-items: center;" class="container-fluid">
+    <a>Contact Us</a>
+
+    <div style="display: flex; justify-content: space-between; width: 105px;">
+      <img class="socials" src="../../images/logo-linkedin.svg">
+      <img class="socials" src="../../images/logo-instagram.svg">
+      <img class="socials" src="../../images/logo-facebook.svg">
+    </div>
+  </footer>
 </body>
+
 </html>
