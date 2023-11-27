@@ -3,82 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Add Course</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <div>
+    <div class="container mt-5">
         <h3>Add course</h3>
         <div>
             <form id="courseForm">
-                <div>
+                <div class="form-group">
                     <label for="courseType">Type</label>
-                </div>
-                <div>
-                    <select name="trainingType" id="courseType">
+                    <select class="form-control" name="courseType" id="courseType">
                         <option value="">Select an option</option>
                         <option value="LPC">LPC</option>
                         <option value="Typerating">Typerating</option>
                         <option value="Instructor">Instructor</option>
-                      </select>
+                    </select>
                 </div>
-                <div>
+                <div class="form-group">
                     <label for="airplaneId">Airplane Type</label>
+                    <select class="form-control" name="airplaneId" id="airplaneId"></select>
                 </div>
-                <div>
-                    <select name="airplaneType" id="airplaneId"></select>
-                </div>
-                <div>
+                <div class="form-group">
                     <label for="courseLocation">Venue</label>
-                </div>
-                <div>
-                    <select name="venue" id="courseLocation">
+                    <select class="form-control" name="courseLocation" id="courseLocation">
                         <option>Select an option</option>
-                        <option value="Munich"></option>
-                        <option value="Dubai"></option>
-                        <option value="Copenhagen"></option>
+                        <option value="Munich">Munich</option>
+                        <option value="Dubai">Dubai</option>
+                        <option value="Copenhagen">Copenhagen</option>
                     </select>
                 </div>
-                <div>
-                    <label for="simulatorType" id="simulator">Simulator type</label>
+                <div class="form-group">
+                    <label for="simulatorType">Simulator type</label>
+                    <input class="form-control" id="simulatorType" required>
                 </div>
-                <div>
-                    <input id="simulatorType" required>
-                </div>
-                <div>
+                <div class="form-group">
                     <label for="ESEA">ESEA approval</label>
-                </div>
-                <div>
-                    <select name="ESEA "id="ESEA">
+                    <select class="form-control" name="ESEA" id="ESEA">
                         <option>Yes</option>
                         <option>No</option>
                     </select>
                 </div>
-                <div>
+                <div class="form-group">
                     <label for="ATPL">Is ATPL unfreezing possible</label>
-                </div>
-                <div>
-                    <select name="ATPL "id="ATPL">
+                    <select class="form-control" name="ATPL" id="ATPL">
                         <option>Yes</option>
                         <option>No</option>
                     </select>
                 </div>
-                <div>
+                <div class="form-group">
                     <label for="price">Price from</label>
+                    <input class="form-control" name="price" id="price">
                 </div>
-                <div>
-                    <input name="price" id="price">
-                </div>
-                <div>
+                <div class="form-group">
                     <label for="date">Course date</label>
-                </div>
-                <div>
-                    <input id="date" name="date" type="date">
+                    <input class="form-control" id="date" name="date" type="date">
                 </div>
             </form>
         </div>
-        <button id="addCourse">Add course</button>
+        <button class="btn btn-primary" id="addCourse">Add course</button>
     </div>
+    <div class="container mt-3" id="add-course-status"></div>
+    <!-- Bootstrap JS and your custom JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="addCourse.js"></script>
 </body>
-
 </html>
