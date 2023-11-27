@@ -1,0 +1,16 @@
+.content-container {
+    margin-top: 55px;
+    flex: 1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.content-inner-container {
+    max-width: 800px;
+    background: white;
+}
+
+.content-inner-container img {
+    width: 100%;
+}

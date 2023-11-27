@@ -5,155 +5,50 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About | ScandiTraining</title>
-  <link rel="icon" href="../../images/stalogo.png" type="image/x-icon">
-  <link rel="stylesheet" href="../../styles/styles.css">
+  
+
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <style>
-    h1 {
-      font-size: 1.8rem;
-      font-weight: 700;
-      text-align: center;
-    }
+  <link rel="stylesheet" href="styles/about/about.css">
+  <link rel="stylesheet" href="styles/general/navbar.css">
+  <link rel="stylesheet" href="styles/general/footer.css">
 
-    h2,
-    h3 {
-      font-size: 1.5rem;
-      font-weight: 700;
-      text-align: center;
-    }
 
-    p {
-      font-size: 1rem;
-      font-weight: 400;
-      margin-bottom: 1rem;
-    }
-
-    .container {
-      width: 90%;
-      margin: 0 auto;
-    }
-
-    .cockpit-img {
-      width: 100%;
-      height: auto;
-    }
-
-    .image-text {
-      text-align: center;
-      color: white;
-      font-size: 1rem;
-      font-weight: 500;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 65%;
-    }
-
-    .image-text h2 {
-      font-size: 1rem;
-    }
-
-    .content-section {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      margin-top: 30px;
-      margin-bottom: 30px;
-    }
-
-    .text-container {
-      width: 100%;
-    }
-
-    .image-section-container {
-      width: 100%;
-    }
-
-    .image-section-container img {
-      width: 100%;
-      height: auto;
-      border-radius: 10px;
-    }
-
-    @media (max-width: 767px) {
-      .image-text p {
-        display: none;
-      }
-
-      .cockpit-img {
-        height: 300px;
-      }
-    }
-
-    @media (min-width: 768px) {
-      .image-text p {
-        display: block;
-      }
-
-      .cockpit-img {
-        height: 700px;
-      }
-
-      h1 {
-        font-size: 2rem;
-      }
-
-      h2,
-      h3 {
-        font-size: 1.75rem;
-      }
-
-      p {
-        font-size: 1.2rem;
-      }
-
-      .container {
-        width: 80%;
-      }
-
-      .image-section-container img {
-        width: 80%;
-        display: flex;
-        justify-content: center;
-        margin: 0 auto;
-      }
-    }
-  </style>
 </head>
 
 <body>
-  <header tabindex="0">Header
-    <img style="max-height: 40px; left:0; position: absolute;" src="../../images/STA logo all.png">
-  </header>
-  <div id="nav-container">
-    <div class="bg"></div>
-    <div class="nav-button" tabindex="0">
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
+  
+
+  <div id="navmenu">
+    <header tabindex="0">Header
+        <img  onclick="window.location.href = 'index.html';" id="logo-sta" src="billeder/STA logo all.png">
+    </header>
+    <div id="nav-container">
+        <div class="bg"></div>
+        <div class="nav-button" tabindex="0">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </div>
+        <div id="nav-content" tabindex="0">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="typerating.html">Typerating</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#0">Contact</a></li>
+                <li class="nav-socials"><a href="#0">Facebook</a><a href="#0">Instagram</a></li>
+            </ul>
+        </div>
     </div>
-    <div id="nav-content" tabindex="0">
-      <ul class="nav-links">
-        <li><a href="#0">Home</a></li>
-        <li><a href="#0">Services</a></li>
-        <li><a href="#0">Blog</a></li>
-        <li><a href="#0">About</a></li>
-        <li><a href="#0">Contact</a></li>
-        <li class="nav-socials"><a href="#0">Facebook</a><a href="#0">Instagram</a></li>
-      </ul>
-    </div>
-  </div>
+</div>
 
   <div class="image-container" style="position: relative;">
     <div class="image-text">
-      <h1>Scandinavian Training Academy</h1>
-      <p>Welcome to Scandinavian Training Academy, an Approved pilot Training Organisation (ATO) located in Copenhagen,
-        Denmark, with multiple centers across Europe and the Middle East.</p>
+      <br><br><h1>About</h1>
+    
     </div>
-    <div style="overflow: hidden; display: flex; align-items: end;">
+    <div style="overflow: hidden; display: flex; align-items: end; height: 200px;">
       <img class="cockpit-img" src="/images/P1010451.jpg">
     </div>
   </div>
@@ -161,7 +56,9 @@
   <div class="container">
     <section class="content-section">
       <div class="text-container txt-container-big">
-        <h2>Welcome to Scandinavian Training Academy</h2>
+        <h2>We are Scandinavian Training Academy</h2>
+        <p>Welcome to Scandinavian Training Academy, an Approved pilot Training Organisation (ATO) located in Copenhagen,
+          Denmark, with multiple centers across Europe and the Middle East.</p>
         <p>We offer a range of Typerating courses and Proficiency training primarily focused on Airbus 320 and Boeing
           737
           and
@@ -231,15 +128,18 @@
 
   </div>
   </main>
-  <footer style="display: flex; justify-content: space-between; align-items: center;" class="container-fluid">
+ 
+  <footer class="container-fluid">
     <a>Contact Us</a>
 
-    <div style="display: flex; justify-content: space-between; width: 105px;">
-      <img class="socials" src="../../images/logo-linkedin.svg">
-      <img class="socials" src="../../images/logo-instagram.svg">
-      <img class="socials" src="../../images/logo-facebook.svg">
+    <div class="footer-socials-container">
+        <img class="footer-socials" src="/images/logo-linkedin.svg">
+        <img class="footer-socials" src="/images/logo-instagram.svg">
+        <img class="footer-socials" src="/images/logo-facebook.svg">
     </div>
-  </footer>
+</footer>
+
+
 </body>
 
 </html>

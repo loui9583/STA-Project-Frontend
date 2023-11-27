@@ -1,0 +1,19 @@
+footer {
+    background-color: #f0f0f0;
+    height: 50px;
+    padding: 10px;
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-socials {
+    max-width: 30px;
+}
+
+.footer-socials-container {
+    display: flex;
+    justify-content: space-between;
+    width: 105px;
+}
