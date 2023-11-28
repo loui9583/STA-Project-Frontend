@@ -6,6 +6,7 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 .footer-socials {
