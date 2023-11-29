@@ -1,244 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="styles/styles.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Navigo Pagination Demo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles/style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.4.0/purify.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="/styles/adminPortal.css">
+  <script src="index.js" type="module"></script>
 </head>
-<body>
-        <header style="position: fixed;" tabindex="0">Header
-            <img style="max-height: 40px; left:15px; position: absolute;" src="images/STA logo all.png">
-        </header>
-        <div id="nav-container">
-          <div class="bg"></div>
-          <div class="nav-button" tabindex="0">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </div>
-          <div id="nav-content" tabindex="0">
-            <ul class="nav-links">
-              <li><a href="#0">Home</a></li>
-              <li><a href="#0">Services</a></li>
-              <li><a href="#0">Blog</a></li>
-              <li><a href="#0">About</a></li>
-              <li><a href="#0">Contact</a></li>
-              <li class="nav-socials"><a href="#0">Facebook</a><a href="#0">Instagram</a></li>
-            </ul>
-          </div>
-        </div>
-      
-        <main>
-          <div class="content">
-            <div style="width: 100%; display: flex; justify-content: center;">
-                <div style="max-width: 800px; background: white;">
-                    <img style="width: 100%;" src="images\P1010126.jpg">
-        
-                    <div class="container-fluid mt-4">
-                        <h3 style="text-align: center;"><b>Welcome To Scandinavian Training Academy</b></h1>
-                            <p style="text-align: center;">
-                                Approved Pilot Training Organisation (ATO) in Copenhagen,
-                                Denmark, with multiple centers in Europe and the Middle East. Specializing in Typerating courses
-                                for
-                                Airbus 320 and Boeing 737/777/787, we are dedicated to delivering top-notch industry standard
-                                pilot
-                                training
-                                experiences.
-                            </p>
-                    </div>
-                    
-                    <div id="services"
-                        style="flex: 1; background: rgba(187, 229, 243, 0.096); padding-top: 5px; padding-bottom: 5px;"
-                        class="container-fluid mt-2">
-                        <h3 style="text-align: center;"><b>Our Services Include</b></h1>
-        
-        
-                            <p
-                                style="background: #4d84bc;" class="service-item">
-                                <b>Type
-                                    Ratings for Airbus 320 and Boeing 737/777/787</b>
-                            </p>
-                            <p
-                                style="background:#42709f;" class="service-item">
-                                <b>LPC
-                                    Renewal</b>
-                            </p>
-                            <p
-                                style="background:#365c83;" class="service-item">
-                                <b>Instructor
-                                    Training Courses</b>
-                            </p>
-                            <div style="width: 100%; text-align: center;">
-        
-                            </div>
-                    </div>
-          
-                    <h3 class="mt-3" style="text-align: center;"><b>Upcoming Courses</b></h1>
-                        <div style="max-width: 100%;" class="ag-format-container">
-                            <div class="ag-courses_box">
-        
-        
-                                <div class="ag-courses_item">
-                                    <a class="ag-courses-item_link">
-                                        <div class="ag-courses-item_bg"></div>
-        
-                                        <div class="ag-courses-item_title">
-                                            Type Rating - <br>Boing 777
-                                        </div>
-        
-                                        <div style="display: flex; justify-content: space-between; align-items: center;"
-                                            class="ag-courses-item_date-box">
-                                            <div>
-                                                Start:
-                                                <span class="ag-courses-item_date">
-                                                    04.11.2022
-                                                </span>
-                                            </div>
-                                            <span style="padding: 4px; border-radius: 5px;"><b>Learn More</b></span>
-                                        </div>
-                                    </a>
-                                </div>
-        
-                                <div class="ag-courses_item">
-                                    <a class="ag-courses-item_link">
-                                        <div class="ag-courses-item_bg"></div>
-        
-                                        <div class="ag-courses-item_title">
-                                            Type Rating - <br>Airbus A320
-                                        </div>
-        
-                                        <div style="display: flex; justify-content: space-between; align-items: center;"
-                                            class="ag-courses-item_date-box">
-                                            <div>
-                                                Start:
-                                                <span class="ag-courses-item_date">
-                                                    04.11.2022
-                                                </span>
-                                            </div>
-                                            <span style="padding: 4px; border-radius: 5px;"><b>Learn More</b></span>
-                                        </div>
-                                    </a>
-                                </div>
-        
-                            </div>
-                        </div>
-        
-                        <div id="client-container" class="container-fluid mt-5 mb-4 ">
-                            <h3 style="text-align: center;"><b>Some companies using our services
-                                </b></h1>
-                                <div id="clients" style="display: flex; justify-content: center;">
-                                    <img class="client-img"
-                                        src="https://scanditraining.com/wp-content/uploads/2022/11/chair.png">
-                                    <img class="client-img"
-                                        src="https://scanditraining.com/wp-content/uploads/2022/11/artAviation.png">
-                                    <img class="client-img"
-                                        src="https://scanditraining.com/wp-content/uploads/2022/11/finnishGov.png">
-                                    <img class="client-img"
-                                        src="https://scanditraining.com/wp-content/uploads/2022/11/norse.png">
-                                </div>
-                        </div>
-        
-                        <h4 style="text-align: center;" class="mt-4"><b>What our customers say..</b></h4>
-        
-                        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-                            <div class="carousel-inner">
-                                <div class="carousel-item active" data-bs-interval="5000">
-        
-                                    <figure class="snip1139 mx-auto">
-                                        <blockquote>Sometimes I think the surest sign that intelligent life exists elsewhere in
-                                            the
-                                            universe
-                                            is that none of it has tried to contact us.
-                                            <div class="arrow"></div>
-                                        </blockquote>
-                                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample3.jpg"
-                                            alt="sample3" />
-                                        <div class="author">
-                                            <p class="mt-2">Pelican Steve</p>
-                                        </div>
-                                    </figure>
-        
-                                </div>
-        
-                                <div class="carousel-item" data-bs-interval="5000">
-        
-                                    <figure class="snip1139 mx-auto">
-                                        <blockquote>I don't need to compromise on my principles, because they don't have the
-                                            slightest
-                                            bearing on what happens to me anyway.
-                                            <div class="arrow"></div>
-                                        </blockquote>
-                                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample47.jpg"
-                                            alt="sample47" />
-                                        <div class="author">
-                                            <p class="mt-2">Max Conversion</p>
-                                        </div>
-                                    </figure>
-        
-                                </div>
-        
-        
-                                <div class="carousel-item" data-bs-interval="5000">
-        
-                                    <figure class="snip1139 mx-auto">
-                                        <blockquote>That's the problem with nature, something's always stinging you or oozing
-                                            mucous
-                                            all
-                                            over you. Let's go and watch TV.
-                                            <div class="arrow"></div>
-                                        </blockquote>
-                                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample17.jpg"
-                                            alt="sample17" />
-                                        <div class="author">
-                                            <p class="mt-2">Eleanor Faint</p>
-                                        </div>
-                                    </figure>
-        
-                                </div>
-                            </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
-                                data-bs-slide="prev">
-                                <span style="padding: 5px; border-radius: 4px;" class="carousel-control-prev-icon bg-dark"
-                                    aria-hidden="true"></p>
-                                    <span class="visually-hidden">Previous</p>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
-                                data-bs-slide="next">
-                                <span style="padding: 5px; border-radius: 5px;" class="carousel-control-next-icon bg-dark"
-                                    aria-hidden="true"></p>
-                                    <span class="visually-hidden">Next</p>
-                            </button>
-                        </div>
-                        
-                        <div class="container-fluid mt-4    ">
-                            <h3 style="font-weight: 50;">We Make Training Simple!</h1>
-                        </div>
-        
-        
-        
-                        
-        
-                </div>
-            </div>
-          </div>
-        </main>
 
-      <footer style="display: flex; justify-content: space-between; align-items: center;" class="container-fluid">
-        <a>Contact Us</a>
+<body style="font-family: sans-serif">
 
-        <div style="display: flex; justify-content: space-between; width: 105px;">
-            <img class="socials" src="../images/logo-linkedin.svg">
-            <img class="socials" src="../images/logo-instagram.svg">
-            <img class="socials" src="../images/logo-facebook.svg">
-        </div>
-    </footer>
+<div class="background-image-container">
+    <img class="background-image" src="images/P1010350.jpg" title="background_image">
+</div>
+<div id="sidebar">
+<ul>
+    <li>Home</li>
+    <li class="dropdown">Users
+        <ul class="dropdown-content">
+            <li>
+               <a href="/new-user" data-navigo>New User</a>
+            </li>
+            <li>Edit User</li>
+            <li>Remove User</li>
+        </ul>
+    </li>
+    <li class="dropdown">Courses
+        <ul class="dropdown-content">
+            <li>
+                <a href="/new-course" data-navigo>New Course</a>
+            </li>
+            <li>Edit Course</li>
+            <li>Remove Course</li>
+        </ul>
+    </li>
+    <li class="dropdown">Testimonials
+        <ul class="dropdown-content">
+            <li>New Testimonial</li>
+            <li>Edit Testimonial</li>
+            <li>Remove Testimonial</li>
+        </ul>
+    </li>
+    <li>Logout</li>
+</ul>
+</div>
+<hr/>
 
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-      crossorigin="anonymous"></script>
+<div id="content">
+<h1>Welcome to the Admin Portal</h1>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js">
+</script>
 </body>
+
 </html>

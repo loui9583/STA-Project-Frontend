@@ -1,8 +1,0 @@
-.clients {
-    display: flex;
-    justify-content: center;
-}
-
-.clients img {
-    max-width: 25%;
-}
