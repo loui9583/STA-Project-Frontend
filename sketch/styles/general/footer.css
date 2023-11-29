@@ -1,0 +1,31 @@
+footer {
+    background-color: #f0f0f0;
+    height: 50px;
+    padding: 10px;
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.footer-socials {
+    max-width: 30px;
+}
+
+.footer-socials-container {
+    display: flex;
+    justify-content: space-between;
+    width: 105px;
+}
+
+footer a {
+    color: #000;
+    text-decoration: none;
+    font-weight: 100;
+}
+
+footer a:hover {
+    color: #000;
+    text-decoration: underline;
+}

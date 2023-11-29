@@ -1,3 +1,19 @@
+header {
+    display: flex;
+    position: fixed;
+    left: 0;
+    width: 100%;
+    height: 54px;
+    background: #ffffff;
+    color: #fff;
+    justify-content: left;
+    align-items: center;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    z-index: 100;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Navbar */
 #nav-container {
     position: fixed;
     height: 100vh;
@@ -21,6 +37,10 @@
 #nav-container:focus-within .bg {
     visibility: visible;
     opacity: .6;
+}
+
+#nav-container * {
+    visibility: visible;
 }
 
 .nav-button {
@@ -47,14 +67,23 @@
 }
 
 #nav-content li a {
-    padding: 10px 5px;
+    padding: 20px 5px;
     display: block;
     text-transform: uppercase;
     transition: color .1s;
+    text-decoration: none;
+    color: black;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #ccc;
 }
 
 #nav-content li a:hover {
-    color: #BF7497;
+    color: #2c97f4;
+}
+
+#nav-content li:not(.nav-socials)+.nav-socials {
+    margin-top: auto;
 }
 
 #nav-container:focus-within .nav-button {
@@ -101,11 +130,11 @@
     display: block;
     width: 100%;
     height: 3px;
-    background: #aaa;
+    background: #6e6d6d;
     transition: .3s;
 }
 
-.icon-bar + .icon-bar {
+.icon-bar+.icon-bar {
     margin-top: 5px;
 }
 
@@ -120,6 +149,18 @@
     color: #888;
 }
 
-.nav-socials a + a {
+.nav-socials a+a {
     margin-left: 15px;
+}
+
+#logo-sta {
+    max-height: 40px;
+    position: fixed;
+    z-index: 100;
+    left: 25px;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
 }
