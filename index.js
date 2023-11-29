@@ -5,6 +5,7 @@ import {
   setActiveLink, renderHtml, loadHtml
 } from "./utils.js"
 
+//import { initSomething } from "./pages/something.js"
 
 window.addEventListener("load", async () => {
 
@@ -34,7 +35,6 @@ window.addEventListener("load", async () => {
       </p>
      `,
       "/about": () => renderHtml(templateAbout, "content"),
-
 
     })
     .notFound(() => {
