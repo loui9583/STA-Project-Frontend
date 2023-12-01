@@ -35,8 +35,6 @@ export async function loadHtml(page) {
   return div
 }
 
-
-
 /**
  * Only meant for when Navigo is set to use Hash based routing (Always this semester)
  * If users try to enter your site with only "/", it will change this to "/#/" as required
@@ -50,6 +48,7 @@ export function adjustForMissingHash() {
     window.history.pushState({}, path, window.location.href + path);
   }
 }
+
 
 /**
  * Sets active element on a div (or similar) containing a-tags (with data-navigo attributes ) used as a "menu"
@@ -69,34 +68,45 @@ export function setActiveLink(topnav, activeUrl) {
 }
 
 /**
- * Small utility function to use in the first "then()" when fetching data from a REST API that supply error-responses as JSON
- *
+ * Small utility function to use in the first "then()" when fetching data from a REST API that supplies error-responses
+ * as JSON
  * Use like this--> const responseData = await fetch(URL,{..}).then(handleHttpErrors)
  */
 export async function handleHttpErrors(res) {
   if (!res.ok) {
     const errorResponse = await res.json();
-    const error = new Error(errorResponse.message)
-    // @ts-ignore
-    error.fullResponse = errorResponse
-    throw error
+    const msg = errorResponse.message ? errorResponse.message:"No error details provided"
+    throw new Error(msg)
   }
-  return res.json()
+ return res.json()
+}
+
+export function makeOptions(method, body, addToken) {
+  const opts = {
+    method: method,
+    headers: {
+      "Content-type": "application/json",
+      "Accept": "application/json"
+    }
+  }
+  if (body) {
+    opts.body = JSON.stringify(body);
+  }
+   if (addToken && localStorage.getItem("token")) {
+    opts.headers.Authorization = "Bearer " + localStorage.getItem("token")
+  }
+  return opts;
 }
 
 
 /**
- * HINT --> USE DOMPurify.santitize(..) to sanitize a full string of tags to be inserted
- * via innerHTLM
- * Tablerows are required to be inside a table tag, so use this small utility function to 
- * santitize a string with TableRows only (made from data with map)
- * DOMPurify is available here, because it's imported in index.html, and as so available in all 
- * your JavaScript files
+ * Table-rows are required to be inside a table tag, so use this small utility function to santitize a string with TableRows only 
+ * (made from data with map)
+ * SEE Here for info related to how to use DomPurify and the function below this semester here:
+ * https://docs.google.com/document/d/14aC77ITi9sLCMruYUchu4L93dBqKnoja3I7TwR0lXw8/edit#heading=h.jj4ss771miw5 
 */
 export function sanitizeStringWithTableRows(tableRows) {
   let secureRows = DOMPurify.sanitize("<table>" + tableRows + "</table>")
   secureRows = secureRows.replace("<table>", "").replace("</table>", "")
   return secureRows
 }
-
-

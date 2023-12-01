@@ -3,16 +3,16 @@
 const API_URL = "http://localhost:8080/api/"
 
 
-/*export function initAddCourse(){
-    const token = localStorage.getItem('token');
-    if (token === null) {
+export function initAddCourse(){
+const token = localStorage.getItem('token');
+if (token === null) {
         alert("You must be logged in to change courses")
-        window.router.navigate("#")
+        window.router.navigate("/login")
         return;
     }
 loadPlanes()
 document.querySelector("#addCourse").addEventListener("click", async () => addCourse())
-}*/
+}
 
 loadPlanes()
 
