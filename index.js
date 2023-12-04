@@ -8,9 +8,8 @@ import {
   setActiveLink, renderHtml, loadHtml, adjustForMissingHash
 } from "./utils.js"
 
+import { courseEditor } from "./pages/courseEditor/courseEditor.js"
 
-//import { initSomething } from "./pages/something.js"
-/*import { initAddCourse } from "./pages/addCourse/addCourse.js"*/
 import { initSignOut } from "./pages/signout/signOut.js"
 import { initTestimonials } from "./pages/testimonials/testimonials.js";
 
@@ -18,6 +17,7 @@ window.addEventListener("load", async () => {
 
   /*const templateAddCourse = await loadHtml("./pages/addCourse/addCourse.html")*/
   const templateTestimonials = await loadHtml("./pages/testimonials/testimonials.html")
+  const templateCourseEditor = await loadHtml("./pages/courseEditor/courseEditor.html")
   
   const router = new Navigo("/",{hash:true});
   //Not especially nice, BUT MEANT to simplify things. Make the router global so it can be accessed from all js-files
@@ -45,6 +45,10 @@ window.addEventListener("load", async () => {
       "/testimonials": () => {
         renderHtml(templateTestimonials, "content")
         initTestimonials()
+      },
+      "/courseEditor": () => {
+        renderHtml(templateCourseEditor, "content")
+        courseEditor()
       },
       "/signOut": () => {
         initSignOut()
