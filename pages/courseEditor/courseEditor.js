@@ -1,6 +1,4 @@
 
-
-
 export function courseEditor() {
   console.log("Course Editor") 
   fetchCourses();
@@ -18,30 +16,65 @@ async function fetchCourses() {
         'Authorization': `Bearer ${localStorage.getItem("token")}`,
         'Content-Type': 'application/json'
       },
-    })
+    });
+
     if (response.ok) {
       const data = await response.json();
-      let tableString = "";
-      for (let i = 0; i<data.length; i++){
-        tableString+=`
-        <tr><td>${data[i].id}</td><td>${data[i].title}</td><td>${data[i].description}</td>
-       
-        <td><input readonly type="datetime-local" value="${data[i].startDate}"></td>
-        <td>${data[i].pageLink}</td>
-        
-        <td><button style="margin-right: 10px" class="btn btn-primary">Edit</button><button class="btn btn-danger">Delete</button></td></tr>
-        `
+
+      // Clear existing content
+      while (tbody.firstChild) {
+        tbody.removeChild(tbody.firstChild);
       }
-      tbody.innerHTML=tableString;
+
+      for (let i = 0; i < data.length; i++) {
+        const tr = document.createElement('tr');
+        
+        // Create and append table cells
+        tr.appendChild(createTableCell(data[i].id));
+        tr.appendChild(createTableCell(data[i].title));
+        tr.appendChild(createTableCell(data[i].description));
+
+        // Create and append datetime-local cell
+        const dateTd = document.createElement('td');
+        const dateInput = document.createElement('input');
+        dateInput.setAttribute('type', 'datetime-local');
+        dateInput.setAttribute('value', data[i].startDate);
+        dateInput.setAttribute('readonly', 'true');
+        dateTd.appendChild(dateInput);
+        tr.appendChild(dateTd);
+
+        tr.appendChild(createTableCell(data[i].venue));
+        tr.appendChild(createTableCell(data[i].pageLink));
+
+        // Create and append buttons
+        const editButton = document.createElement('button');
+        editButton.textContent = 'Edit';
+        editButton.className = 'btn btn-primary';
+        tr.appendChild(editButton);
+
+        const deleteButton = document.createElement('button');
+        deleteButton.textContent = 'Delete';
+        deleteButton.className = 'btn btn-danger';
+       deleteButton.onclick = () => deleteCourse(data[i].id);
+
+        tr.appendChild(deleteButton);
+
+        // Append the row to the tbody
+        tbody.appendChild(tr);
+      }
+    } else {
+      console.error("Error fetching: Response status:" + response.status);
+      throw new Error();
     }
-    else {
-      console.error("Error fetching: Reponse status:" + response.status)
-      throw new Error()
-    }
+  } catch (error) {
+    console.log('ERROR ' + error.message);
   }
-  catch(error){
-    console.log('ERROR ' + error.message)
-  }
+}
+
+function createTableCell(value) {
+  const td = document.createElement('td');
+  td.textContent = value;
+  return td;
 }
 
 
@@ -51,7 +84,10 @@ async function addCourse() {
     "title": "${document.getElementById("title").value}",
     "description": "${document.getElementById("description").value}", 
     "startDate": "${document.getElementById("start-date").value}",
-    "pageLink": "${document.getElementById("pageLink").value}"
+
+    "pageLink": "${document.getElementById("pageLink").value}",
+    "venue": "${document.getElementById("venue").value}"
+
   }`;
   console.log(bodyString)
   try {
@@ -76,4 +112,28 @@ async function addCourse() {
     console.log('ERROR add ' + error.message)
   }
   fetchCourses();
+
+}
+
+async function deleteCourse(id){
+  try {
+    const response = await fetch(`http://localhost:8080/api/courses/delete/${id}`,{
+      method: "DELETE",
+      headers: {
+        'Authorization': `Bearer ${localStorage.getItem("token")}`
+      }
+      
+    })
+    if (response.ok){
+      console.log("delete SUCCESS!")
+    }
+    else {
+      console.error("ERROR. Response status: " + response.status); throw new Error();
+    }
+  }
+  catch(error){
+    console.error(error.message)
+  }
+  fetchCourses();
+
 }
