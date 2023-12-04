@@ -27,7 +27,8 @@ window.addEventListener("load", async () => {
   router
     .hooks({
       before(done, match) {
-        setActiveLink("sidebar", match.url)
+        setActiveLink("navbar", match.url)
+        checkLoginStatus()
         adjustForMissingHash()
         checkLoginStatus()
         done()
