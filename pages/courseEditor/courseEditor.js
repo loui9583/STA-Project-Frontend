@@ -1,3 +1,4 @@
+
 export function courseEditor() {
   console.log("Course Editor") 
   fetchCourses();
@@ -77,15 +78,16 @@ function createTableCell(value) {
 }
 
 
-
 async function addCourse() {
   let bodyString = `
   {
     "title": "${document.getElementById("title").value}",
     "description": "${document.getElementById("description").value}", 
     "startDate": "${document.getElementById("start-date").value}",
+
     "pageLink": "${document.getElementById("pageLink").value}",
     "venue": "${document.getElementById("venue").value}"
+
   }`;
   console.log(bodyString)
   try {
@@ -110,6 +112,7 @@ async function addCourse() {
     console.log('ERROR add ' + error.message)
   }
   fetchCourses();
+
 }
 
 async function deleteCourse(id){
@@ -132,4 +135,5 @@ async function deleteCourse(id){
     console.error(error.message)
   }
   fetchCourses();
+
 }

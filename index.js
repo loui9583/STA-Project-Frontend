@@ -11,10 +11,14 @@ import {
 import { courseEditor } from "./pages/courseEditor/courseEditor.js"
 
 import { initSignOut } from "./pages/signout/signOut.js"
+import { initTestimonials } from "./pages/testimonials/testimonials.js";
 
 window.addEventListener("load", async () => {
 
   /*const templateAddCourse = await loadHtml("./pages/addCourse/addCourse.html")*/
+
+  const templateTestimonials = await loadHtml("./pages/testimonials/testimonials.html")
+
   const templateCourseEditor = await loadHtml("./pages/courseEditor/courseEditor.html")
   
   const router = new Navigo("/",{hash:true});
@@ -28,6 +32,7 @@ window.addEventListener("load", async () => {
         setActiveLink("navbar", match.url)
         checkLoginStatus()
         adjustForMissingHash()
+        checkLoginStatus()
         done()
       }
     })
@@ -36,6 +41,16 @@ window.addEventListener("load", async () => {
       "/": () => document.getElementById("content").innerHTML =
       `<h1>Welcome to the Admin Portal</h1>`,
       
+
+      /*"/addCourse": () => {
+        renderHtml(templateAddCourse, "content")
+        initAddCourse()
+      },*/
+      "/testimonials": () => {
+        renderHtml(templateTestimonials, "content")
+        initTestimonials()
+      },
+
       "/courseEditor": () => {
         renderHtml(templateCourseEditor, "content")
         courseEditor()
