@@ -10,13 +10,11 @@ import {
 
 
 //import { initSomething } from "./pages/something.js"
-import { initTest } from "./pages/pageTest/test.js"
 /*import { initAddCourse } from "./pages/addCourse/addCourse.js"*/
 import { initSignOut } from "./pages/signout/signOut.js"
 
 window.addEventListener("load", async () => {
 
-  const templateTest = await loadHtml("./pages/pageTest/test.html")
   /*const templateAddCourse = await loadHtml("./pages/addCourse/addCourse.html")*/
   
   const router = new Navigo("/",{hash:true});
