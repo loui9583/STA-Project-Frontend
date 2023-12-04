@@ -25,25 +25,13 @@ window.addEventListener("load", async () => {
   router
     .hooks({
       before(done, match) {
-        setActiveLink("sidebar", match.url)
+        setActiveLink("navbar", match.url)
         checkLoginStatus()
         adjustForMissingHash()
         done()
       }
     })
     .on({
-      //For very simple "templates", you can just insert your HTML directly like below
-      "/": () => document.getElementById("content").innerHTML =
-      `<h1>Welcome to the Admin Portal</h1>`,
-      
-      "/test": () => {
-        renderHtml(templateTest, "content")
-        initTest()
-      },
-      /*"/addCourse": () => {
-        renderHtml(templateAddCourse, "content")
-        initAddCourse()
-      },*/
       "/signOut": () => {
         initSignOut()
       }
