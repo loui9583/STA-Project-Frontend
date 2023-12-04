@@ -1,0 +1,50 @@
+<div class="template">
+    <h2 style="text-align: center;"><strong>Course Editor</strong></h2>
+    <br>
+
+    <div style="display: flex; justify-content: space-between;">
+        <div style="border: 2px solid black; border-radius: 4px; padding: 2px;" id="addCourse">
+            <h4 style="width: 285px;">Add New Course</h4>
+            <div class="m-2">
+                <label style="width: 85px;">Title:</label>
+                <input style="width: 200px;" id="title" placeholder="title..">
+            </div>
+            <div class="m-2">
+                <label style="width: 85px;">Description:</label>
+                <textarea style="resize: vertical; width: 200px;" id="description"
+                    placeholder="description.."></textarea>
+            </div>
+            <div class="m-2">
+                <label style="width: 85px; ">Start Date:</label>
+                <input style="width: 200px;" id="start-date" type="datetime-local">
+            </div>
+            <div class="m-2">
+                <label style="width: 85px; ">Page Link</label>
+                <input style="width: 200px;" id="pageLink" placeholder="Link to page">
+            </div>
+            <div class="mt-4" style=" width: 285px;">
+                <button class="btn btn-primary" id="submitButton">Submit</button>
+            </div>
+        </div>
+    
+        
+    <table class="table table-light">
+    
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Start Date</th>
+                <th>Page Link</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="tbody">
+        </div>
+
+
+        </tbody>
+    </table>
+
+</div>
