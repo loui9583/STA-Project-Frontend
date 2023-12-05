@@ -22,7 +22,6 @@ export async function initTestimonials() {
 }
 
 
-
 async function fetchTestimonials() {
   document.getElementById("error").innerText = "";
 

@@ -49,12 +49,12 @@ async function fetchCourses() {
         // Create and append buttons
         const editButton = document.createElement('button');
         editButton.textContent = 'Edit';
-        editButton.className = 'btn btn-primary';
         tr.appendChild(editButton);
 
         const deleteButton = document.createElement('button');
         deleteButton.textContent = 'Delete';
-        deleteButton.className = 'btn btn-danger';
+        deleteButton.style.background="darkred";
+        deleteButton.style.color="white";
        deleteButton.onclick = () => deleteCourse(data[i].id);
 
         tr.appendChild(deleteButton);
