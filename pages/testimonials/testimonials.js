@@ -9,9 +9,8 @@ export async function initTestimonials() {
 
     
   fetchTestimonials();
-  document.getElementById("submitButton").addEventListener("click", () => {
-    submitTestimonial();
-  });
+  document.getElementById("submitButton").onclick = () => submitTestimonial();
+  
       // Add a new event listener outside the loop
       document.getElementById("tablerows").addEventListener("click", function(event) {
         if (event.target.classList.contains("delete-btn")) {
@@ -37,7 +36,6 @@ async function fetchTestimonials() {
           <td>${testimonial.id}</td>
           <td>${testimonial.text}</td>
           <td>${testimonial.submissionName}</td>
-          <td>${testimonial.image}</td>
           <td>
           <button style="margin-right: 10px" class="btn btn-primary edit-btn" data-id="${testimonial.id}">Edit</button>
           <button class="btn btn-danger delete-btn" data-id="${testimonial.id}">Delete</button>
@@ -62,7 +60,6 @@ function submitTestimonial() {
   // Add logic to handle the submitted testimonial
   const text = document.getElementById("text").value;
   const submissionName = document.getElementById("submissionName").value;
-  const image = document.getElementById("image").value;
 
   // Create a testimonial object
   const testimonial = {
