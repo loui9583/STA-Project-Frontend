@@ -7,7 +7,7 @@ ul.menu-horizontal {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #333;
+  background-color: #ccc;
 }
 
 ul.menu-horizontal li {
@@ -28,7 +28,7 @@ ul.menu-horizontal li a:hover:not(.active) {
 
 
 ul.menu-horizontal a.active {
-  background-color: #04aa6d;
+  background-color: #2c97f4;
 }
 
 /* 
@@ -55,7 +55,7 @@ ul.menu-vertical li a {
 }
 
 ul.menu-vertical li a.active {
-  background-color: #04aa6d;
+  background-color: #2c97f4;
   color: white;
 }
 
