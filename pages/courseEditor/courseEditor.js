@@ -32,7 +32,7 @@ async function fetchCourses() {
         // Create and append table cells
         tr.appendChild(createTableCell(data[i].id));
         tr.appendChild(createTableCell(data[i].title));
-        tr.appendChild(createTableCell(data[i].description));
+      
 
         // Create and append datetime-local cell
         const dateTd = document.createElement('td');
@@ -49,12 +49,12 @@ async function fetchCourses() {
         // Create and append buttons
         const editButton = document.createElement('button');
         editButton.textContent = 'Edit';
-        editButton.className = 'btn btn-primary';
         tr.appendChild(editButton);
 
         const deleteButton = document.createElement('button');
         deleteButton.textContent = 'Delete';
-        deleteButton.className = 'btn btn-danger';
+        deleteButton.style.background="darkred";
+        deleteButton.style.color="white";
        deleteButton.onclick = () => deleteCourse(data[i].id);
 
         tr.appendChild(deleteButton);
@@ -82,7 +82,7 @@ async function addCourse() {
   let bodyString = `
   {
     "title": "${document.getElementById("title").value}",
-    "description": "${document.getElementById("description").value}", 
+    "description": "", 
     "startDate": "${document.getElementById("start-date").value}",
 
     "pageLink": "${document.getElementById("pageLink").value}",
