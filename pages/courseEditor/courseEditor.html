@@ -3,52 +3,59 @@
     <br>
 
     <div style="display: flex; justify-content: space-between;">
-        <div style="border: 2px solid black; border-radius: 4px; padding: 2px;" id="addCourse">
-            <h4 style="width: 285px;">Add New Course</h4>
+        <div style="border: 1px solid black; border-radius: 4px; padding: 10px; max-width: 300px;" id="addCourse">
+            <h4 style="text-align: center; margin-bottom: 15px;">Add New Course</h4>
             <div class="m-2">
-                <label style="width: 85px;">Title:</label>
-                <input style="width: 200px;" id="title" placeholder="title..">
+                <label style="width: 85px; display: inline-block;">Title:</label>
+                <input
+                    style="width: calc(100% - 100px); display: inline-block; margin-left: 10px; padding: 5px; border-radius: 3px; border: 1px solid #ccc;"
+                    id="title" placeholder="Title..">
             </div>
             <div class="m-2">
-                <label style="width: 85px; ">Start Date:</label>
-                <input style="width: 200px;" id="start-date" type="datetime-local">
+                <label style="width: 85px; display: inline-block;">Start Date:</label>
+                <input
+                    style="width: calc(100% - 100px); display: inline-block; margin-left: 10px; padding: 5px; border-radius: 3px; border: 1px solid #ccc;"
+                    id="start-date" type="datetime-local">
             </div>
             <div class="m-2">
-                <label style="width: 85px; ">Page Link</label>
-                <input style="width: 200px;" id="pageLink" placeholder="Link to page">
+                <label style="width: 85px; display: inline-block;">Page Link</label>
+                <input
+                    style="width: calc(100% - 100px); display: inline-block; margin-left: 10px; padding: 5px; border-radius: 3px; border: 1px solid #ccc;"
+                    id="pageLink" placeholder="Link to page">
             </div>
-
             <div class="m-2">
-                <label style="width: 85px; ">Venue/s</label>
-                <input style="width: 200px;" id="venue" placeholder="Add venue/s here">
+                <label style="width: 85px; display: inline-block;">Venue/s</label>
+                <input
+                    style="width: calc(100% - 100px); display: inline-block; margin-left: 10px; padding: 5px; border-radius: 3px; border: 1px solid #ccc;"
+                    id="venue" placeholder="Add venue/s here">
             </div>
-
-            <div class="mt-4" style=" width: 285px;">
-                <button class="btn btn-primary" id="submitButton">Submit</button>
+            <div class="mt-4" style="width: 100%;">
+                <button class="btn btn-primary" style="width: 100%;" id="submitButton">Submit</button>
             </div>
         </div>
-    
-        
-    <table class="table table-light">
-    
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Title</th>
-                <th>Start Date</th>
-                <th>Venue</th>
-                <th>Page Link</th>
-              
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody id="tbody">
 
 
 
-        </tbody>
-    </table>
+        <table class="table table-light">
 
-</div>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>Start Date</th>
+                    <th>Venue</th>
+                    <th>Page Link</th>
+
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+
+
+
+            </tbody>
+        </table>
+
+    </div>
 
 </div>
