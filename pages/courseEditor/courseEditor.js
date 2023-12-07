@@ -1,3 +1,4 @@
+import { API_URL } from "../../settings.js";
 
 export function courseEditor() {
   console.log("Course Editor") 
@@ -10,7 +11,7 @@ export function courseEditor() {
 async function fetchCourses() {
   let tbody = document.getElementById("tbody");
   try {
-    const response = await fetch('http://localhost:8080/api/courses', {
+    const response = await fetch(API_URL +'/courses', {
       method: "GET",
       headers: {
         'Authorization': `Bearer ${localStorage.getItem("token")}`,
