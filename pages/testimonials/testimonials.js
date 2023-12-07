@@ -6,24 +6,21 @@ import {
 } from "../../utils.js";
 
 export async function initTestimonials() {
-
-    
   fetchTestimonials();
   document.getElementById("submitButton").onclick = () => submitTestimonial();
+  // Add a new event listener outside the loop
   
-      // Add a new event listener outside the loop
-      document.getElementById("tablerows").addEventListener("click", function(event) {
-        if (event.target.classList.contains("delete-btn")) {
-          const testimonialId = event.target.dataset.id;
-          deleteTestimonial(testimonialId);
-        }
-      });
-}
 
+  document.getElementById("tablerows").onclick = (event) => {
+    if (event.target.classList.contains("delete-btn")) {
+      const testimonialId = event.target.dataset.id;
+      deleteTestimonial(testimonialId);
+    }
+  }
+}
 
 async function fetchTestimonials() {
   document.getElementById("error").innerText = "";
-
   try {
     const URL = API_URL + "/testimonials";
     const testimonials = await fetch(URL, makeOptions("GET", null, false)).then(
@@ -41,11 +38,10 @@ async function fetchTestimonials() {
           <button class="btn btn-danger delete-btn" data-id="${testimonial.id}">Delete</button>
           </td></tr>
           </tr>`;
-      }) 
+      })
       .join("\n");
     const saferows = sanitizeStringWithTableRows(rows);
     document.getElementById("tablerows").innerHTML = saferows;
-
   } catch (error) {
     if (error.apiError) {
       document.getElementById("error").innerText = error.apiError.message;
