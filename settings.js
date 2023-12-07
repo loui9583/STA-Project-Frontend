@@ -1,0 +1,1 @@
+export const API_URL = "https://sta-project-staging.azurewebsites.net/api"
