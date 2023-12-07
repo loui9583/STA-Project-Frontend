@@ -92,7 +92,7 @@ async function addCourse() {
   }`;
   console.log(bodyString)
   try {
-    const response = await fetch('http://localhost:8080/api/courses', {
+    const response = await fetch(API_URL + '/courses', {
       method: "POST",
       headers: {
         'Authorization': `Bearer ${localStorage.getItem("token")}`,
@@ -118,7 +118,7 @@ async function addCourse() {
 
 async function deleteCourse(id){
   try {
-    const response = await fetch(`http://localhost:8080/api/courses/delete/${id}`,{
+    const response = await fetch(API_URL + `/courses/delete/${id}`,{
       method: "DELETE",
       headers: {
         'Authorization': `Bearer ${localStorage.getItem("token")}`
