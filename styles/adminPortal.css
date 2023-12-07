@@ -6,23 +6,11 @@
 }
 
 .background-image {
-    max-height: 100vh;
-    min-width: 100vw;
-    opacity: 0.4;
+    height: auto;
+    max-height: 100%;
+    width: 100%;
+    opacity: 0.9;
 }
-
-body {
-    background-color: rgb(8, 8, 8);
-    height: 100vh;
-    margin: 0;
-    font-family: 'Kanit', sans-serif;
-    color: white;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 .login-container {
     width: 30%;
     background-color: aliceblue;
