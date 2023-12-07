@@ -48,9 +48,6 @@ async function fetchCourses() {
         tr.appendChild(createTableCell(data[i].pageLink));
 
         // Create and append buttons
-        const editButton = document.createElement('button');
-        editButton.textContent = 'Edit';
-        tr.appendChild(editButton);
 
         const deleteButton = document.createElement('button');
         deleteButton.textContent = 'Delete';
