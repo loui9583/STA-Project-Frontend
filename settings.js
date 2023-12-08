@@ -1,1 +1,1 @@
-export const API_URL = "https://sta-project-staging.azurewebsites.net/api"
+export const API_URL = "sta-project-main.azurewebsites.net/api"
