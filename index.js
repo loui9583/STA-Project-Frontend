@@ -35,6 +35,10 @@ window.addEventListener("load", async () => {
     })
     .on({
       //For very simple "templates", you can just insert your HTML directly like below
+      "": (match) => {
+        renderHtml(templateLogin, "content")
+        initLogin()
+      },
       "/": (match) => {
         renderHtml(templateLogin, "content")
         initLogin()
@@ -49,7 +53,8 @@ window.addEventListener("load", async () => {
       }
     })
     .notFound(() => {
-      renderHtml(templateNotFound, "content")
+      renderHtml(templateLogin, "content")
+      initLogin()
     })
     .resolve()
 });
