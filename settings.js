@@ -1,1 +1,1 @@
-export const API_URL = "https://sta-project-main.azurewebsites.net/api"
+export const API_URL = "https://project-2-louis-nordsoe.azurewebsites.net/api"
